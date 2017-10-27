@@ -1,0 +1,82 @@
+/* =========================================== */
+/* ============= General Styles ============== */
+/* =========================================== */
+.fff{
+	color: $white
+}
+html,p,div,li,a,h1,h2,h3,h4,h5,h6,span{
+	font-family: 'Roboto';
+}
+h1,h2,h3{
+	font-weight: 900;
+}
+.service-box{
+	border: 3px solid $white;
+	padding: 70px 80px;
+	color: $white;
+	h3{
+		display: inline;
+		margin-right: 5px;
+	}
+	a{
+		color: $white;
+		text-transform: uppercase;
+	}
+}
+/* =========================================== */
+/* ================ Home Page ================ */
+/* =========================================== */
+.home-hero{
+
+}
+.featured-work{
+	padding: 10% 0;
+	transform: skewY(10deg);
+	position: relative;
+	z-index: 12;
+	top: -150px;
+	background-color: $white;
+	.row{
+		transform:skewY(-10deg);
+	}
+}
+.services{
+	background-color: $black;
+	padding: 100px 0 60px;
+	margin-top: -400px;
+	.row.expanded{
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position:center center;
+	}
+	aside{
+		padding: 30px 0;
+	}
+}
+.services2{
+	background-color: $black;
+	padding: 10% 0 5%;
+	.row.expanded{
+		padding: 0;
+		img{
+			width: 100%;
+		}
+	}
+	.service-box{
+		position: relative;
+		top: -100px;
+		z-index: 1;
+		padding-top: 20%;
+		h3{
+			display:block;
+			margin-bottom: 0;
+		}
+	}
+}
+.about{
+	padding: 10% 0;
+	.testimonial-box{
+		border: 3px solid $black;
+		padding: 30px;
+	}
+}
