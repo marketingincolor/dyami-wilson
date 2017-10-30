@@ -27,6 +27,7 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header class="site-header" role="banner">
+		<?php get_template_part('page-templates/hamburger-icon'); ?>
 		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?>>
 			<div class="title-bar-left">
 				<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
@@ -51,5 +52,5 @@
 		</nav>
 	</header>
 
-	<section class="container">
+	<section class="container clearfix">
 		<?php do_action( 'foundationpress_after_header' );

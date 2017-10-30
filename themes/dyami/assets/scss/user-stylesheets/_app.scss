@@ -54,6 +54,7 @@ h1,h2,h3{
 	top: 50px;
 	left: 50px;
 	cursor: pointer;
+	z-index: 99;
 	&:hover .top-line{
 		animation: top-line 1s infinite;
 		animation-timing-function: ease-in-out;
@@ -85,12 +86,25 @@ h1,h2,h3{
 	}
 }
 .left-menu{
-	position: absolute;
-	left: -10%;
-	width: 10%;
+	position: fixed;
+	left: -25%;
+	width: 25%;
+	height: 100vh;
+	padding: 10% 50px;
+	z-index: 100;
+	background-color: $white;
+	top: 0;
 	transition: left 0.4s ease-in-out;
 	&.slide-in{
 		left: 0;
+	}
+	.menu-close{
+		position: absolute;
+		right: 20px;
+		top: 30px;
+		border: none;
+		font-weight: 900;
+		font-size: 24px;
 	}
 }
 

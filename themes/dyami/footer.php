@@ -7,11 +7,11 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+  get_template_part('page-templates/left-menu');
 ?>
 
 		</section>
-		<img src="<?php bloginfo('template_directory'); ?>/assets/images/black-triangle.jpg" alt="" style="width:100%">
+		<img src="<?php bloginfo('template_directory'); ?>/assets/images/black-triangle.jpg" alt="" style="width:100%;margin-bottom:-1px">
 		<div class="" data-sticky-footer>
 
 			
