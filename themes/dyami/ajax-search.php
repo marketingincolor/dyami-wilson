@@ -43,14 +43,21 @@ header("HTTP/1.1 200 OK");
 			<div class="small-12 columns">
 				<h3 id="work-category"><?php echo $cat_name; ?></h3>
 			</div>
-			
+
 <?php
 	  if($filter->have_posts()) { while($filter->have_posts()) { $filter->the_post();
 	  	$count_faqs = $filter->post_count;
 	  	if ($count_faqs == 1) {
 ?>
+
 					<div class="small-12 medium-8 columns">
-						<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url(); ?>"></a>
+						<a href="<?php the_permalink(); ?>" class="feat-img-cont">
+							<div style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+								<p><i class="fa fa-volume-up" aria-hidden="true"></i></p>
+								<p>Play Audio</p>
+							</div>
+							
+					  </a>
 					</div>
 					<div class="small-12 medium-4 columns">
 						<h4><?php the_title(); ?></h4>
@@ -64,7 +71,7 @@ header("HTTP/1.1 200 OK");
 <?php }else if ($count_faqs == 2) { ?>
 	  		
 	  			<div class="small-12 medium-6 columns">
-	  				<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url(); ?>"></a>
+	  				<a href="<?php the_permalink(); ?>" class="feat-img-cont"><img src="<?php the_post_thumbnail_url(); ?>"></a>
 	  				<h3><?php the_title(); ?></h3>
 	  				<p><?php the_author(); ?></p>
 	  				<p class="description">
@@ -77,7 +84,7 @@ header("HTTP/1.1 200 OK");
 <?php }else if ($count_faqs >= 3) { ?>
 	  		
 	  			<div class="small-12 medium-4 columns">
-	  				<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url(); ?>"></a>
+	  				<a href="<?php the_permalink(); ?>" class="feat-img-cont"><img src="<?php the_post_thumbnail_url(); ?>"></a>
 	  				<h3><?php the_title(); ?></h3>
 	  				<p><?php the_author(); ?></p>
 	  				<p class="description">
