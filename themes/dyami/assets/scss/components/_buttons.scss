@@ -14,6 +14,17 @@ button{
 	cursor: pointer;
 	transition: all 0.25s ease-in-out;
 }
+
+//CREATED MIXIN FOR CONTACT FORM.
+@mixin button() {
+	text-transform: uppercase;
+	border-style: solid;
+	border-width: 3px;
+	padding: 10px 25px;
+	cursor: pointer;
+	transition: all 0.25s ease-in-out;
+}
+
 .btn-white{
 	border-color: $white;
 	color: $white;
@@ -22,6 +33,7 @@ button{
 		color: $black;
 	}
 }
+
 .btn-black{
 	border-color: $black;
 	&:hover{
@@ -36,6 +48,30 @@ button{
   // height: 100%;
 }
 
+@mixin btn-white-inverse() { 
+	@include button();
+	color: $white;
+	float: right;
+	padding: 20px 75px;
+	background: transparent;
+	border: 4px solid $white;
+	text-transform: uppercase;
+	&:hover{
+		background-color: $white;
+		color: $black;
+		font-weight: bold;
+	}
+}
+
+@mixin btn-back-to-top {
+	@include button();
+	color: $white;
+	float: right;
+	padding: 20px 75px;
+	background: transparent;
+	border: 4px solid $white;
+	text-transform: uppercase;
+}
 .home-hero:after {
 // content: "";
 // position: absolute;
