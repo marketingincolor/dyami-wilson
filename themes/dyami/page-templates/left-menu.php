@@ -1,11 +1,9 @@
 <aside class="left-menu">
 	<button class="menu-close">X</button>
+		<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/logo-black.jpg" alt="">
+			<!-- Display Left Menu -->
+	  	<?php wp_nav_menu( array( 'theme_location' => 'left-menu','menu_id' => 'left-menu-list','menu_class' => 'left-menu-list','container' => 'ul' )); ?>
 		<ul>
-			<li>Home</li>
-			<li>Featured Work</li>
-			<li>Services</li>
-			<li>Meet Dyami</li>
-			<li>Contact</li>
 			<li class="social-icons">
 				<ul>
 					<li><a href="#!" title="Facebook Profile"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>

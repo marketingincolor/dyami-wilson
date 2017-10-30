@@ -15,7 +15,7 @@
 		<div class="" data-sticky-footer>
 
 			
-			<footer class="footer row expanded">
+			<footer class="footer row expanded" id="contact">
 
 				<!-- Form Section -->
 				<section class="footer__pre-form">

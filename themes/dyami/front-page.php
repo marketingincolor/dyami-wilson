@@ -3,7 +3,7 @@
 	get_header();
 ?>
 
-	<section class="home-hero" style="background-image: url('/wp-content/uploads/2017/10/home-hero-b.png');background-position: center center;background-size:cover">
+	<section id="home" class="home-hero" style="background-image: url('/wp-content/uploads/2017/10/home-hero-b.png');background-position: center center;background-size:cover">
 		<div class="row">
 			<div class="medium-8 medium-centered columns text-center">
 				<h1 class="fff">Passionate About Music &amp; Sound Design</h1>
@@ -18,7 +18,7 @@
 		</div>
 	</section>
 
-	<section class="featured-work">
+	<section class="featured-work" id="featured-work">
 		<div class="row">
 			<div class="small-12 columns clearfix">
 				<h2>Featured Work</h2>
@@ -44,7 +44,7 @@
 		</div>
 	</section>
 
-	<section class="services">
+	<section class="services" id="services">
 		<div class="row">
 			<div class="small-12 columns clearfix">
 				<h2 class="fff">Services</h2>
@@ -95,7 +95,7 @@
 		</div>
 	</section>
 
-	<section class="about">
+	<section class="about" id="meet-dyami">
 		<div class="row">
 			<div class="medium-11 medium-offset-1 columns">
 				<h2>Meet Dyami</h2>
