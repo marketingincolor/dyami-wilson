@@ -11,14 +11,11 @@
 ?>
 
 		</section>
+		<img src="<?php bloginfo('template_directory'); ?>/assets/images/black-triangle.jpg" alt="" style="width:100%">
 		<div class="" data-sticky-footer>
 
 			
 			<footer class="footer row expanded">
-
-				<!-- Diagonal Section -->
-				<section class="footer__diagonal"></section>
-				<!-- /Diagonal Section -->
 
 				<!-- Form Section -->
 				<section class="footer__pre-form">
@@ -26,8 +23,8 @@
 						<div class="small-8 small-offset-2 columns text-left">
 							<section class="footer-top-container">
 								<h2>Contact</h2>
-								<p class="footer__pre-form-phone">Get Phone Number</p>
-								<p class="footer__pre-form-email">Get Email Address</p>
+								<p class="footer__pre-form-phone">727.831.1377</p>
+								<p class="footer__pre-form-email"><a href="mailto:dyamiwilsonmusic@gmail.com">dyamiwilsonmusic@gmail.com</a></p>
 							</section>
 
 							<section class="footer__form">
