@@ -97,3 +97,88 @@ footer {
 
 
 }
+
+/* =========================================== */
+/* ============= Header Styles =============== */
+/* =========================================== */
+
+.fixed { position: fixed !important; }
+.relative { position: relative; }
+
+.top-bar {
+
+	&__wrapper { padding-bottom: 18px; 
+	}
+    position: relative;
+    background-color: #000000;
+    padding-top: 50px;
+	
+	&__hamburger-menu { 
+		
+		.hamburger { 
+			position: relative; 
+			top: 0px; 
+			left: 2px; 
+			align-items: center;
+
+		}
+
+		&--scrolling {
+			position: fixed !important;
+			top:100px;
+		    background-color: $black;
+		    padding: 15px;
+		    width: 50px;
+		    position: fixed;
+		    top: 50px;
+		    cursor: pointer;
+		    z-index: 99;
+		    color: $white;
+
+		    .top-line,.middle-line, .bottom-line { 
+		    	height: 3px;
+    			background-color: $white;
+    			width: 15px;
+    			margin-bottom: 3px;
+    		}
+		}
+
+
+	}
+
+    &__equalizer-icon { 
+
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+
+    }
+
+    &__social-icons { 
+		float:right;
+		background-color: transparent !important;
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+
+			ul { 
+				background-color: 
+				transparent; 
+				margin-bottom:0rem;
+			}
+
+			li { padding-right: 20px; 
+
+				& a { color: $white; }
+				& i { font-size: 24px; }
+			}
+
+			
+
+			& li { display:inline-block; }
+
+    }
+
+    &__name { padding-bottom: 175px; }
+
+}
