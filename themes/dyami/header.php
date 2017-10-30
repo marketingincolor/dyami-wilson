@@ -18,12 +18,6 @@
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
-
-	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
-	<div class="off-canvas-wrapper">
-		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
-	<?php endif; ?>
-
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header class="site-header" role="banner">
@@ -49,14 +43,14 @@
 				<!-- Hamburger Menu -->
 				<div class="small-3 columns top-bar__hamburger-menu" data-equalizer-watch>
 					<?php get_template_part('page-templates/hamburger-icon'); ?>
-					<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?>>
+<!-- 					<div class="site-title-bar title-bar" <?php #foundationpress_title_bar_responsive_toggle() ?>>
 						<div class="title-bar-left">
-							<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
+							<button class="menu-icon" type="button" data-toggle="<?php #foundationpress_mobile_menu_id(); ?>"></button>
 							<span class="site-mobile-title title-bar-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+								<a href="<?php #echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php #bloginfo( 'name' ); ?></a>
 							</span>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<!-- /Hamburger Menu -->
 
@@ -67,7 +61,7 @@
 				<!-- /Equalizer Icon -->
 				
 				<!-- Social Icons -->
-				<div class="small-3 columns text-center top-bar__social-icons" data-equalizer-watch>
+				<div class="small-3 columns text-center show-for-medium top-bar__social-icons" data-equalizer-watch>
 					<ul class="">
 						<li><a href="#!" title="Facebook Profile"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
 						<li><a href="#!" title="Twitter Profile"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -106,6 +100,8 @@
 			</div>
 		</nav>
 		<?php endif; ?>
+
+
 	</header>
 	<script>templateURL = '<?php bloginfo("template_directory"); ?>';</script>
 	<section class="container clearfix">
