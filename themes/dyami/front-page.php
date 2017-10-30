@@ -13,7 +13,7 @@
 					<li class="fff">Sound Designer</li> &bull;
 					<li class="fff">Producer</li>
 				</ul>
-				<a href="<?php echo site_url().'/contact'; ?>"><button class="btn-white">Contact Dyami</button></a>
+				<a href="#contact"><button class="btn-white">Contact Dyami</button></a>
 			</div>
 		</div>
 	</section>
@@ -22,7 +22,7 @@
 		<div class="row">
 			<div class="small-12 columns clearfix">
 				<h2>Featured Work</h2>
-				<p><a href="#!"><button class="btn-black">View All Projects</button></a></p>
+				<p><a href="<?php echo site_url().'/work'; ?>"><button class="btn-black">View All Projects</button></a></p>
 			</div>
 			<div class="clearfix"></div>
 			<div class="medium-5 large-4 columns clearfix">
