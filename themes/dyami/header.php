@@ -51,6 +51,7 @@
 			</div>
 		</nav>
 	</header>
-
+	
+	<script>templateURL = '<?php bloginfo("template_directory"); ?>';</script>
 	<section class="container clearfix">
 		<?php do_action( 'foundationpress_after_header' );
