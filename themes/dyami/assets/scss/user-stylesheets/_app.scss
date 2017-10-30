@@ -67,16 +67,15 @@ h1,h2,h3{
 	cursor: pointer;
 	z-index: 99;
 	&:hover .top-line{
-		animation: top-line 1s infinite;
+		animation: top-line 0.5s infinite;
 		animation-timing-function: ease-in-out;
 	}
 	&:hover .middle-line{
-		animation: middle-line 1s infinite;
-		animation-delay: 0.25s;
+		animation: middle-line 0.5s infinite;
 		animation-timing-function: ease-in-out;
 	}
 	&:hover .bottom-line{
-	  animation: bottom-line 1s infinite;
+	  animation: bottom-line 0.5s infinite;
 	  animation-delay: 0.15s;
 	  animation-timing-function: ease-in-out;
 	}
@@ -204,4 +203,35 @@ h1,h2,h3{
 /* =========================================== */
 /* ================ Work Page ================ */
 /* =========================================== */
-
+#category-menu-list{
+	margin: 0;
+	list-style-type: none;
+	li{
+		display: inline-block;
+	}
+	li a{
+		color: $black;
+		font-size: 1rem;
+		margin-right: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding-bottom: 5px;
+		transition: all 0.25s ease-in-out;
+		&.active-work,&:hover{
+			border-bottom: 3px solid #000;
+		}
+	}
+}
+#work-category{
+	text-transform: capitalize;
+	margin-top: 30px;
+}
+.feat-img-cont div{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
