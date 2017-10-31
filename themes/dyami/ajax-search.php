@@ -47,52 +47,106 @@ header("HTTP/1.1 200 OK");
 <?php
 	  if($filter->have_posts()) { while($filter->have_posts()) { $filter->the_post();
 	  	$count_faqs = $filter->post_count;
+
+	  	// If there is only 1 post in the category
 	  	if ($count_faqs == 1) {
 ?>
 
 					<div class="small-12 medium-8 columns">
-						<a href="<?php the_permalink(); ?>" class="feat-img-cont">
-							<div style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-								<p><i class="fa fa-volume-up" aria-hidden="true"></i></p>
-								<p>Play Audio</p>
-							</div>
-							
-					  </a>
+
+							<?php if (has_post_format('audio')) { ?>
+									
+		  				<div class="feat-img-cont shadow" data-audio="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+	  						<div class="play">
+	  							<p><i class="fa fa-volume-up" aria-hidden="true"></i></p>
+	  							<p>Play Audio</p>
+	  						</div>
+		  			  </div>
+
+							<?php }else if (has_post_format('video')) { ?>
+
+		  				<div class="feat-img-cont shadow" data-video="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+	  						<div class="play">
+	  							<p><i class="fa fa-play-circle" aria-hidden="true"></i></p>
+	  							<p>Play Video</p>
+	  						</div>
+		  			  </div>
+
+							<?php } ?>
+								
 					</div>
 					<div class="small-12 medium-4 columns">
 						<h4><?php the_title(); ?></h4>
 						<p class="description">
-							<?php the_content(); ?>	
+							<?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?>	
 						</p>
 						<a href="<?php the_permalink(); ?>"><button class="btn-black">View Project</button></a>
 					</div>
-				</section>
 
-<?php }else if ($count_faqs == 2) { ?>
+					<!-- If there is only 2 posts in the category -->
+          <?php }else if ($count_faqs == 2) { ?>
 	  		
 	  			<div class="small-12 medium-6 columns">
-	  				<a href="<?php the_permalink(); ?>" class="feat-img-cont"><img src="<?php the_post_thumbnail_url(); ?>"></a>
+		  			
+		  			<?php if (has_post_format('audio')) { ?>
+
+	  				<div class="feat-img-cont shadow" data-audio="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+  						<div class="play">
+  							<p><i class="fa fa-volume-up" aria-hidden="true"></i></p>
+  							<p>Play Audio</p>
+  						</div>
+	  			  </div>
+
+		  			<?php }else if (has_post_format('video')) { ?>
+
+	  				<div class="feat-img-cont shadow" data-video="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+  						<div class="play">
+  							<p><i class="fa fa-play-circle" aria-hidden="true"></i></p>
+  							<p>Play Video</p>
+  						</div>
+	  			  </div>
+
+		  			<?php } ?>
+
 	  				<h3><?php the_title(); ?></h3>
-	  				<p><?php the_author(); ?></p>
+	  				<p><?php the_field('author'); ?></p>
 	  				<p class="description">
-	  					<?php the_content(); ?>
+	  					<?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?>
 	  				</p>
 	  				<button class="btn-black">View Project</button>
 	  			</div>
-	  		</section>
 
 <?php }else if ($count_faqs >= 3) { ?>
 	  		
-	  			<div class="small-12 medium-4 columns">
-	  				<a href="<?php the_permalink(); ?>" class="feat-img-cont"><img src="<?php the_post_thumbnail_url(); ?>"></a>
+	  			<div class="small-12 medium-4 columns end" style="margin-bottom:30px">
+
+								<?php if (has_post_format('audio')) { ?>
+
+			  				<div class="feat-img-cont shadow" data-audio="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+		  						<div class="play">
+		  							<p><i class="fa fa-volume-up" aria-hidden="true"></i></p>
+		  							<p>Play Audio</p>
+		  						</div>
+			  			  </div>
+
+		  					<?php }else if (has_post_format('video')) { ?>
+
+			  				<div class="feat-img-cont shadow" data-video="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+		  						<div class="play">
+		  							<p><i class="fa fa-play-circle" aria-hidden="true"></i></p>
+		  							<p>Play Video</p>
+		  						</div>
+			  			  </div>
+
+		  					<?php } ?>
+
 	  				<h3><?php the_title(); ?></h3>
 	  				<p><?php the_author(); ?></p>
 	  				<p class="description">
-	  					<?php the_content(); ?>
+	  					<?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?>
 	  				</p>
 	  				<a href="<?php the_permalink(); ?>"><button class="btn-black">View Project</button></a>
 	  			</div>
-	  		</section>
 
 <?php
 	  	}else{
@@ -100,5 +154,5 @@ header("HTTP/1.1 200 OK");
 	  	}}}
 ?>
 
-
+  </section>
 </div>
