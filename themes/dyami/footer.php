@@ -38,7 +38,7 @@
 				<!-- Social Links -->
 				<section class="footer__social-links">
 					<div class="row footer__social-links-layout">
-						<div class="small-4 small-centered columns">
+						<div class="small-12 medium-4 small-centered columns">
 							<ul class="text-center">
 								<li><a href="#!" title="Facebook Profile"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
 								<li><a href="#!" title="Twitter Profile"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>

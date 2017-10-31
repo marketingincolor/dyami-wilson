@@ -29,12 +29,21 @@ footer {
 	}
 	
 
+	// Overides for input button
+	.field-wrap input[type="button"] { 
+
+		@include breakpoint(small) { width: 100%; }
+		@include breakpoint(large) { width: auto; }
+
+	}
+
 	// Contact Form Styles 
 	#ninja_forms_required_items, .nf-field-container { margin: 20px 0px; }
 	nf-field .textarea-container { margin-bottom: 30px; }
 	.nf-error-msg { color: #ffffff; }
 	.nf-error .ninja-forms-field { border: 4px dashed $white; }
 	.nf-error-field-errors { display:none; }
+
 	
 	// Collapse padding from foundation
 	&.footer { padding-top: 0px; }
