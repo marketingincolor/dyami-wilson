@@ -51,7 +51,9 @@ footer {
 		// Text Above Form
 		&__pre-form { 
 			margin: 0px 0px 75px 0px; 
-			&-email { margin-bottom: 16px; }
+			&-email { margin-bottom: 16px; 
+				a { color: $white; } 
+			}
 			&-phone { margin-bottom: 16px; }
 
 		}
