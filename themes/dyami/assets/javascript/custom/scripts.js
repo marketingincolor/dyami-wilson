@@ -1,10 +1,24 @@
 $(document).ready(function(){
+	removeMenuScrolling();
 	menuOpen();
 	menuClose();
 	filterWork();
 	audioVideoModal();
 });
 
+function removeMenuScrolling() {
+	if(screen.width < 400) {
+		$('.hamburger').addClass('hamburger--mobile');
+	}
+
+	$('.hamburger--mobile').on('click', function() {
+		$('body').css('overflow', 'hidden');
+	});
+
+	$('.menu-close').on('click', function() {
+		$('body').css('overflow', 'initial');
+	});
+}
 // Open left menu
 function menuOpen(){
 	$('#hamburger,.top-line,.middle-line,bottom-line').on('click',function(){

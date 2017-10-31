@@ -29,12 +29,21 @@ footer {
 	}
 	
 
+	// Overides for input button
+	.field-wrap input[type="button"] { 
+
+		@include breakpoint(small) { width: 100%; }
+		@include breakpoint(large) { width: auto; }
+
+	}
+
 	// Contact Form Styles 
 	#ninja_forms_required_items, .nf-field-container { margin: 20px 0px; }
 	nf-field .textarea-container { margin-bottom: 30px; }
 	.nf-error-msg { color: #ffffff; }
 	.nf-error .ninja-forms-field { border: 4px dashed $white; }
 	.nf-error-field-errors { display:none; }
+
 	
 	// Collapse padding from foundation
 	&.footer { padding-top: 0px; }
@@ -51,7 +60,9 @@ footer {
 		// Text Above Form
 		&__pre-form { 
 			margin: 0px 0px 75px 0px; 
-			&-email { margin-bottom: 16px; }
+			&-email { margin-bottom: 16px; 
+				a { color: $white; } 
+			}
 			&-phone { margin-bottom: 16px; }
 
 		}
@@ -181,4 +192,26 @@ footer {
 
     &__name { padding-bottom: 175px; }
 
+}
+
+/* =========================================== */
+/* ============= UTILITY ===================== */
+/* =========================================== */
+
+.shadow {
+	-webkit-box-shadow: 0px 0px 50px 0px rgba(43,43,43,0.5);
+	-moz-box-shadow: 0px 0px 50px 0px rgba(43,43,43,0.5);
+	box-shadow: 0px 0px 50px 0px rgba(43,43,43,0.5);
+}
+
+/* =========================================== */
+/* ============= HOME ===================== */
+/* =========================================== */
+
+.home-hero {
+	&__layout {
+		& h1 { margin-bottom: 50px; }
+		&-list li { display: inline-block; margin-bottom: 230px; }
+		&-contact-btn { margin-bottom: 230px; }
+	}
 }
