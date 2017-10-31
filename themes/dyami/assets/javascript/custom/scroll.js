@@ -3,7 +3,6 @@ $(document).ready(function() {
 
 		var depth = $(this).scrollTop();
 		var scrolled = false;
-	    console.log( $(this).scrollTop() );
 
 	    if(depth > 500 && scrolled == false ) {
 	    	$('#hamburger').stop(true,true).removeClass('hamburger');
