@@ -3,17 +3,17 @@
 	get_header();
 ?>
 
-	<section id="home" class="home-hero" style="background-image: url( <?php echo content_url() . '/uploads/2017/10/home-hero-b.png'; ?>);background-position: center center;background-size:cover">
+	<section id="home" class="home-hero" style="background-image: url( <?php echo content_url() . '/themes/dyami/assets/images/home/home-hero.png'; ?>);background-position: center center;background-size:cover">
 		<div class="row">
-			<div class="medium-8 medium-centered columns text-center">
-				<h1 class="fff">Passionate About Music &amp; Sound Design</h1>
-				<ul>
+			<div class="medium-8 medium-centered columns text-center home-hero__layout">
+				<h1 class="fff home-hero__layout-h1">Passionate About Music &amp; Sound Design</h1>
+				<ul class="home-hero__layout-list">
 					<li class="fff">Musician</li> &bull;
 					<li class="fff">Engineer</li> &bull;
 					<li class="fff">Sound Designer</li> &bull;
 					<li class="fff">Producer</li>
 				</ul>
-				<a href="#contact"><button class="btn-white">Contact Dyami</button></a>
+				<a href="#contact"><button class="btn-white home-hero__layout-contact-btn">Contact Dyami</button></a>
 			</div>
 		</div>
 	</section>
