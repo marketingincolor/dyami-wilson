@@ -210,8 +210,12 @@ footer {
 
 .home-hero {
 	&__layout {
+		&-list li ul { margin-left: 0rem; }
+		&-list li:first-child ul li { margin-right: .75rem; }
+		&-list li:not(:first-child) ul li { display: list-item; margin-right: .75rem; margin-left: .75rem; }
+		&-list li span { color:$white; }
 		& h1 { margin-bottom: 50px; }
-		&-list li { display: inline-block; margin-bottom: 230px; }
+		&-list li { display: inline-block; margin-bottom: 230px; color: $white; }
 		&-contact-btn { margin-bottom: 230px; }
 	}
 }

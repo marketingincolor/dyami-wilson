@@ -8,10 +8,18 @@
 			<div class="medium-8 medium-centered columns text-center home-hero__layout">
 				<h1 class="fff home-hero__layout-h1">Passionate About Music &amp; Sound Design</h1>
 				<ul class="home-hero__layout-list">
-					<li class="fff">Musician</li> &bull;
-					<li class="fff">Engineer</li> &bull;
-					<li class="fff">Sound Designer</li> &bull;
-					<li class="fff">Producer</li>
+					<li>
+						<ul><li>Musician</li></ul>
+					</li>
+					<li>
+						<ul><li>Engineer</li></ul>
+					</li>
+					<li>
+						<ul><li>Sound Designer</li></ul>
+					</li>
+					<li>
+						<ul><li>Producer</li></ul>
+					</li>
 				</ul>
 				<a href="#contact"><button class="btn-white home-hero__layout-contact-btn">Contact Dyami</button></a>
 			</div>
