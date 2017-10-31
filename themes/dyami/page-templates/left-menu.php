@@ -1,7 +1,8 @@
 <aside class="left-menu">
 	<button class="menu-close">X</button>
 		<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/logo-black.jpg" alt="">
-			<!-- Display Left Menu -->
+		
+		<!-- Display Left Menu -->
 	  	<?php wp_nav_menu( array( 'theme_location' => 'left-menu','menu_id' => 'left-menu-list','menu_class' => 'left-menu-list','container' => 'ul' )); ?>
 		<ul>
 			<li class="social-icons">
