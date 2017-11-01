@@ -4,6 +4,10 @@
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
+<section class="work-hero">
+	<img src="<?php bloginfo('template_directory'); ?>/assets/images/work/work-hero.jpg" alt="">
+</section>
+
 <section class="featured-work">
 	<div class="row">
 		<div class="small-12 columns">

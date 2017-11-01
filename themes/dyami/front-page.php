@@ -3,7 +3,7 @@
 	get_header();
 ?>
 
-	<section id="home" class="home-hero" style="background-image: url( <?php echo content_url() . '/themes/dyami/assets/images/home/home-hero.png'; ?>);background-position: center center;background-size:cover">
+	<section id="home" class="home-hero" style="background-image: url( <?php bloginfo('template_directory'); ?>/assets/images/home/home-hero.png);background-position: center bottom;background-size:cover">
 		<div class="row">
 			<div class="medium-8 medium-centered columns text-center home-hero__layout">
 				<h1 class="fff home-hero__layout-h1">Passionate About Music &amp; Sound Design</h1>
