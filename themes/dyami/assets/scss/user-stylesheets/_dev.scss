@@ -217,11 +217,25 @@ footer {
 	&__layout {
 
 		position: absolute;
-	    top: 40%;
 	    transform: translate(-50%, -50%);
 	    left: 50%;
+		
+		@include breakpoint(small) {
+			top: 50%;
+		}
+		
+		@include breakpoint(medium) {
+	    	top: 40%;
+		}
 
 		&-list { 
+
+			@include breakpoint(small) {
+				font-size: .75rem;
+			}
+			@include breakpoint(large) {
+				font-size: 1rem;
+			}
 			margin-bottom: 10%; 
 
 			& li ul { margin-left: 0rem; }
