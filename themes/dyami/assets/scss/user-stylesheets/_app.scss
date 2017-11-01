@@ -173,7 +173,7 @@ h1,h2,h3{
 	z-index: 12;
 	top: -150px;
 	background-color: $white;
-	.row{
+	.row,.main-content{
 		transform: skewY(-10deg);
 	}
 }
