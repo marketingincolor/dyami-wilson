@@ -220,22 +220,18 @@ footer {
 	&__layout {
 
 		position: absolute;
-	    transform: translate(-50%, -50%);
-	    left: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
 		
 		@include breakpoint(small) {
 			top: 50%;
-		}
-		
-		@include breakpoint(medium) {
-	    	top: 40%;
 		}
 
 		&-list {
 
 			margin: 0rem;
 			@include breakpoint(small) {
-				font-size: .75rem;
+				font-size: .70rem;
 			}
 			@include breakpoint(large) {
 				font-size: 1rem;

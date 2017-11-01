@@ -1,4 +1,4 @@
-<section class="home-hero" style="background: url( <?php bloginfo('template_directory'); ?>/assets/images/single/single-hero.jpg) center center no-repeat;background-size:cover"></section>
+<section class="single-hero" style="background: url( <?php bloginfo('template_directory'); ?>/assets/images/single/single-hero.jpg) center center no-repeat;background-size:cover"></section>
 
 <section class="featured-post">
 	<div class="row">

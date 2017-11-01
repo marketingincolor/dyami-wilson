@@ -3,26 +3,28 @@
 	get_header();
 ?>
 
-	<div class="row">
-		<div class="medium-8 medium-centered columns text-center home-hero__layout">
-			<h1 class="fff home-hero__layout-h1">Passionate About Music &amp; Sound Design</h1>
-			<ul class="home-hero__layout-list">
-				<li>
-					<ul><li>Musician</li></ul>
-				</li>
-				<li>
-					<ul><li>Engineer</li></ul>
-				</li>
-				<li>
-					<ul><li>Sound Designer</li></ul>
-				</li>
-				<li>
-					<ul><li>Producer</li></ul>
-				</li>
-			</ul>
-			<a href="#contact"><button class="btn-white home-hero__layout-contact-btn">Contact Dyami</button></a>
+	<section id="home" class="home-hero" style="background-image: url( <?php echo content_url() . '/themes/dyami/assets/images/home/home-hero.png'; ?>);background-position: center center;background-size:cover">
+		<div class="row">
+			<div class="medium-8 medium-centered columns text-center home-hero__layout">
+				<h1 class="fff home-hero__layout-h1">Passionate About Music &amp; Sound Design</h1>
+				<ul class="home-hero__layout-list">
+					<li>
+						<ul><li>Musician</li></ul>
+					</li>
+					<li>
+						<ul><li>Engineer</li></ul>
+					</li>
+					<li>
+						<ul><li>Sound Designer</li></ul>
+					</li>
+					<li>
+						<ul><li>Producer</li></ul>
+					</li>
+				</ul>
+				<a href="#contact"><button class="btn-white home-hero__layout-contact-btn">Contact Dyami</button></a>
+			</div>
 		</div>
-	</div>
+	</section>
 
 	<section class="featured-work" id="featured-work">
 		<div class="row">
@@ -34,7 +36,7 @@
 			<div class="medium-5 large-4 columns clearfix">
 				<h3>Android</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolores, repudiandae soluta similique voluptate? Perferendis harum, unde architecto molestiae! Autem tenetur quas fugit ut voluptates et natus laborum, ex ad!</p>
-				<p><a href="#!" class="text-uppercase">View Project</a></p>
+				<p><a href="<?php the_permalink(); ?>" class="text-uppercase">View Project</a></p>
 			</div>
 			<div class="medium-6 large-7 medium-offset-1 columns">
 				<img src="http://fillmurray.com/800/400" alt="">
@@ -45,7 +47,7 @@
 			<div class="medium-5 large-4 columns">
 				<h3>Android</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolores, repudiandae soluta similique voluptate? Perferendis harum, unde architecto molestiae! Autem tenetur quas fugit ut voluptates et natus laborum, ex ad!</p>
-				<p><a href="#!" class="text-uppercase">View Project</a></p>
+				<p><a href="<?php the_permalink(); ?>" class="text-uppercase">View Project</a></p>
 			</div>
 		</div>
 	</section>
