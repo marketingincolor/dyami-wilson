@@ -4,6 +4,8 @@
 ?>
 
 	<section id="home" class="home-hero" style="background-image: url( <?php echo content_url() . '/themes/dyami/assets/images/home/home-hero.png'; ?>);background-position: center center;background-size:cover">
+		<img src="<?php echo content_url() . '/themes/dyami/assets/images/home/home-hero.png'; ?>" style="visibility: hidden;" />
+
 		<div class="row">
 			<div class="medium-8 medium-centered columns text-center home-hero__layout">
 				<h1 class="fff home-hero__layout-h1">Passionate About Music &amp; Sound Design</h1>

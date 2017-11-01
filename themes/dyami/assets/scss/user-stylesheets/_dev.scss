@@ -120,9 +120,10 @@ footer {
 
 	&__wrapper { padding-bottom: 18px; 
 	}
-    position: relative;
-    background-color: #000000;
-    padding-top: 50px;
+    position: absolute;
+    background-color: transparent;
+    top: 50px;
+    width: 100%;
 	
 	&__hamburger-menu { 
 		
@@ -190,7 +191,7 @@ footer {
 
     }
 
-    &__name { padding-bottom: 175px; }
+    &__name { }
 
 }
 
@@ -210,12 +211,31 @@ footer {
 
 .home-hero {
 	&__layout {
+
+		position: absolute;
+	    top: 40%;
+	    transform: translate(-50%, -50%);
+	    left: 50%;
+
 		&-list li ul { margin-left: 0rem; }
 		&-list li:first-child ul li { margin-right: .75rem; }
 		&-list li:not(:first-child) ul li { display: list-item; margin-right: .75rem; margin-left: .75rem; }
 		&-list li span { color:$white; }
 		& h1 { margin-bottom: 50px; }
-		&-list li { display: inline-block; margin-bottom: 230px; color: $white; }
-		&-contact-btn { margin-bottom: 230px; }
+		&-list li { display: inline-block; color: $white; }
+		&-contact-btn {  }
+	}
+}
+
+/* =============================================== */
+/* ============= SINGLE PAGE ===================== */
+/* =============================================== */
+
+.single-page {
+	transform: skewY(10deg);
+	background-color: $white;
+
+	&__article {
+		transform: skewY(-10deg);
 	}
 }
