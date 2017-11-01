@@ -27,6 +27,14 @@ h1,h2,h3{
 		text-transform: uppercase;
 	}
 }
+.project-meta{
+	h3,p{
+		display: inline;
+	}
+	h3{
+		margin-right: 10px;
+	}
+}
 
 /* =========================================== */
 /* =================  Header ================= */
@@ -54,11 +62,8 @@ h1,h2,h3{
   50%  { width: 15px }
   100% { width: 25px }
 }
-
-
-// Moved left positioning out for --scrolling state.
 .hamburger { left: 50px; }
-.hamburger, .hamburger--scrolling {
+.hamburger{
 	background-color: #000;
 	padding: 15px;
 	width: 50px;
@@ -96,7 +101,6 @@ h1,h2,h3{
 	}
 }
 .left-menu{
-
 	@include breakpoint(small) {
 		width: 100%;
 		max-width: none;
@@ -110,20 +114,11 @@ h1,h2,h3{
 		top: 0;
 		transition: left 0.4s ease-in-out;
 	}
-
 	@include breakpoint(large) {
-		width: 100%;
-		position: fixed;
 		left: -100%;
 		max-width: 300px;
-		height: 100vh;
 		padding: 20% 3%;
-		z-index: 100;
-		background-color: $white;
-		top: 0;
-		transition: left 0.4s ease-in-out;
 	}
-
 	&.slide-in{
 		left: 0;
 	}
@@ -264,5 +259,13 @@ h1,h2,h3{
 			color: rgba(255,255,255,0.5);
 			font-size: 4rem;
 		}
+	}
+}
+/* =========================================== */
+/* =============== Single Page =============== */
+/* =========================================== */
+.related-posts{
+	h3{
+		text-transform: uppercase;
 	}
 }

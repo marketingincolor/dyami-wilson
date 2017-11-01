@@ -116,9 +116,9 @@ header("HTTP/1.1 200 OK");
 	  				<button class="btn-black">View Project</button>
 	  			</div>
 
-<?php }else if ($count_faqs >= 3) { ?>
+          <?php }else if ($count_faqs >= 3) { ?>
 	  		
-	  			<div class="small-12 medium-4 columns end" style="margin-bottom:30px">
+	  			  <div class="small-12 medium-4 columns end" style="margin-bottom:30px">
 
 								<?php if (has_post_format('audio')) { ?>
 
