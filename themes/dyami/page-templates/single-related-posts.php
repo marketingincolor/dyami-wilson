@@ -46,8 +46,7 @@
 				<a href="<?php the_permalink(); ?>"><button class="btn-black">View Project</button></a>
 			</div>
 
-		<?php endwhile;
-		wp_reset_postdata(); ?>
+		<?php endwhile;wp_reset_postdata(); ?>
 
 		</div>
 	</section>

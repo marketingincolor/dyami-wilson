@@ -26,31 +26,7 @@
 		</div>
 	</section>
 
-	<section class="featured-work" id="featured-work">
-		<div class="row">
-			<div class="small-12 columns clearfix">
-				<h2>Featured Work</h2>
-				<p><a href="<?php echo site_url().'/work'; ?>"><button class="btn-black">View All Projects</button></a></p>
-			</div>
-			<div class="clearfix"></div>
-			<div class="medium-5 large-4 columns clearfix">
-				<h3>Android</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolores, repudiandae soluta similique voluptate? Perferendis harum, unde architecto molestiae! Autem tenetur quas fugit ut voluptates et natus laborum, ex ad!</p>
-				<p><a href="<?php the_permalink(); ?>" class="text-uppercase">View Project</a></p>
-			</div>
-			<div class="medium-6 large-7 medium-offset-1 columns">
-				<img src="http://fillmurray.com/800/400" alt="">
-			</div>
-			<div class="medium-6 large-7 medium-offset-1 columns">
-				<img src="http://fillmurray.com/800/400" alt="">
-			</div>
-			<div class="medium-5 large-4 columns">
-				<h3>Android</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolores, repudiandae soluta similique voluptate? Perferendis harum, unde architecto molestiae! Autem tenetur quas fugit ut voluptates et natus laborum, ex ad!</p>
-				<p><a href="<?php the_permalink(); ?>" class="text-uppercase">View Project</a></p>
-			</div>
-		</div>
-	</section>
+	<?php require('page-templates/featured-work.php'); ?>
 
 	<section class="services" id="services">
 		<div class="row">
