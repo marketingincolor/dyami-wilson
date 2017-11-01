@@ -130,16 +130,21 @@ footer {
 	&__hamburger-menu { 
 		
 		.hamburger { 
-			position: relative; 
-			top: 0px; 
-			left: 2px; 
+			position: fixed; 
+			@include breakpoint(small) {
+				left: 10px;
+			}
+			@include breakpoint(medium) {
+				left: 20px;
+			}
+		    top: 58px;
 			align-items: center;
 
 		}
 
 		&--scrolling {
 			position: fixed !important;
-			top:100px;
+			top: 50px;
 		    background-color: $black;
 		    padding: 15px;
 		    width: 50px;
