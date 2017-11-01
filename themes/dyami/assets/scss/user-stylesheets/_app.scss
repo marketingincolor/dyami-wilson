@@ -264,6 +264,9 @@ h1,h2,h3{
 /* =========================================== */
 /* =============== Single Page =============== */
 /* =========================================== */
+.featured-post,.related-posts{
+	padding-bottom: 10%;
+}
 .related-posts{
 	h3{
 		text-transform: uppercase;
