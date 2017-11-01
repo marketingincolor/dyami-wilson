@@ -43,20 +43,12 @@
 				<!-- Hamburger Menu -->
 				<div class="small-3 columns top-bar__hamburger-menu" data-equalizer-watch>
 					<?php get_template_part('page-templates/hamburger-icon'); ?>
-<!-- 					<div class="site-title-bar title-bar" <?php #foundationpress_title_bar_responsive_toggle() ?>>
-						<div class="title-bar-left">
-							<button class="menu-icon" type="button" data-toggle="<?php #foundationpress_mobile_menu_id(); ?>"></button>
-							<span class="site-mobile-title title-bar-title">
-								<a href="<?php #echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php #bloginfo( 'name' ); ?></a>
-							</span>
-						</div>
-					</div> -->
 				</div>
 				<!-- /Hamburger Menu -->
 
 				<!-- Equalizer Icon -->
 				<div class="small-6 columns top-bar__equalizer-icon" data-equalizer-watch>
-					<a href="<?php site_url(); ?>" title="Home"><img src="<?php echo get_stylesheet_directory_uri() .'/assets/images/icons/logo-white.png'; ?>" alt="Equalizer Icon"></a>
+					<a href="<?php echo site_url(); ?>" title="Home"><img src="<?php echo get_stylesheet_directory_uri() .'/assets/images/icons/logo-white.png'; ?>" alt="Equalizer Icon"></a>
 				</div>
 				<!-- /Equalizer Icon -->
 				
@@ -80,7 +72,6 @@
 				</div>
 			</div>
 			<!-- /Name Logo -->
-
 		</nav>
 
 		<!-- HIDE THIS FOR NOW. -->

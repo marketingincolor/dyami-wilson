@@ -245,6 +245,7 @@ h1,h2,h3{
 	background-position: center center;
 	height: 350px;
 	position: relative;
+	margin-bottom: 1.9375rem;
 	.play{
 		text-align: center;
 		position: absolute;
@@ -264,8 +265,18 @@ h1,h2,h3{
 /* =========================================== */
 /* =============== Single Page =============== */
 /* =========================================== */
+.single-hero{
+	img{
+		width: 100%;
+	}
+}
 .featured-post,.related-posts{
 	padding-bottom: 10%;
+}
+.featured-post{
+	.row{
+		margin-top: -28%;
+	}
 }
 .related-posts{
 	h3{
