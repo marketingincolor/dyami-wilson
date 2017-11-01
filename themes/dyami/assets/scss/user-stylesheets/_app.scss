@@ -159,7 +159,13 @@ h1,h2,h3{
 /* ================ Home Page ================ */
 /* =========================================== */
 .home-hero{
-
+	.tagline{
+		color: $white;
+		padding-bottom: 20%;
+		@include breakpoint(small only){
+			font-size: 14px;
+		}
+	}
 }
 .featured-work{
 	padding: 10% 0 0;

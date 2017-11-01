@@ -222,54 +222,19 @@ footer {
 		position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-		
-		@include breakpoint(small) {
-			top: 50%;
+		top: 50%;
+
+		&-h1{
+			@include breakpoint(small){
+				font-size: 1.6em;
+			}
+			@include breakpoint(medium){
+				font-size: 3em;
+			}
+			@include breakpoint(large){
+				font-size: 3.8em;
+			}
 		}
-
-		&-list {
-
-			margin: 0rem;
-			@include breakpoint(small) {
-				font-size: .70rem;
-			}
-			@include breakpoint(large) {
-				font-size: 1rem;
-			}
-			margin-bottom: 10%; 
-
-			& li ul { margin-left: 0rem; }
-
-			& li:first-child ul li { 
-				@include breakpoint(small) {
-					margin-right: .5rem;
-				}
-				@include breakpoint(medium) {
-					margin-right: .75rem; 
-				}
-			}
-
-			& li:not(:first-child) ul li { 
-				display: list-item; 
-
-				@include breakpoint(small) {
-					margin-right: .5rem; 
-					margin-left: .5rem; 					
-				}
-
-				@include breakpoint(medium) {
-					margin-right: .75rem; 
-					margin-left: .75rem; 
-				}
-			}
-
-			& li span { color:$white; }
-			& li { display: inline-block; color: $white; }
-
-		}
-
-		& h1 { margin-bottom: 50px; }
-		&-contact-btn {  }
 	}
 }
 

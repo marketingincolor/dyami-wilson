@@ -17,13 +17,15 @@
 					$post_exclude = get_the_ID();
 			?>
 
-				<div class="medium-5 large-4 columns clearfix">
-					<h3><?php the_title(); ?></h3>
-					<p><?php echo wp_trim_words(get_the_content(),30,'...') ?></p>
-					<p><a href="<?php the_permalink(); ?>" class="text-uppercase"><button class="btn-black">View Project</button></a></p>
-				</div>
-				<div class="medium-6 large-7 medium-offset-1 columns">
-					<?php the_post_thumbnail(); ?>
+				<div class="clearfix" style="margin-bottom:10%">
+					<div class="medium-5 large-4 columns">
+						<h3><?php the_title(); ?></h3>
+						<p><?php echo wp_trim_words(get_the_content(),30,'...') ?></p>
+						<p><a href="<?php the_permalink(); ?>" class="text-uppercase"><button class="btn-black">View Project</button></a></p>
+					</div>
+					<div class="medium-6 large-7 medium-offset-1 columns">
+						<?php the_post_thumbnail(); ?>
+					</div>
 				</div>
 
 			<?php endwhile;wp_reset_postdata(); ?>
