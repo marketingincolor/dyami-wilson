@@ -105,4 +105,8 @@
 	</header>
 	<script>templateURL = '<?php bloginfo("template_directory"); ?>';</script>
 	<section class="container clearfix">
-		<?php do_action( 'foundationpress_after_header' );
+	
+	<?php do_action( 'foundationpress_after_header' ); ?>
+
+	<section id="home" class="home-hero" style="background-image: url( <?php echo content_url() . '/themes/dyami/assets/images/home/home-hero.png'; ?>);background-position: center center;background-size:cover">
+	</section>

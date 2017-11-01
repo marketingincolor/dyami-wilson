@@ -118,6 +118,8 @@ footer {
 
 .top-bar {
 
+	padding: .5rem 0rem; 
+
 	&__wrapper { padding-bottom: 18px; 
 	}
     position: absolute;
@@ -170,7 +172,7 @@ footer {
 		float:right;
 		background-color: transparent !important;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center; 
 
 			ul { 
@@ -210,6 +212,8 @@ footer {
 /* =========================================== */
 
 .home-hero {
+
+	height: 100vh; 
 	&__layout {
 
 		position: absolute;
@@ -217,12 +221,18 @@ footer {
 	    transform: translate(-50%, -50%);
 	    left: 50%;
 
-		&-list li ul { margin-left: 0rem; }
-		&-list li:first-child ul li { margin-right: .75rem; }
-		&-list li:not(:first-child) ul li { display: list-item; margin-right: .75rem; margin-left: .75rem; }
-		&-list li span { color:$white; }
+		&-list { 
+			margin-bottom: 10%; 
+
+			& li ul { margin-left: 0rem; }
+			& li:first-child ul li { margin-right: .75rem; }
+			& li:not(:first-child) ul li { display: list-item; margin-right: .75rem; margin-left: .75rem; }
+			& li span { color:$white; }
+			& li { display: inline-block; color: $white; }
+
+		}
+
 		& h1 { margin-bottom: 50px; }
-		&-list li { display: inline-block; color: $white; }
 		&-contact-btn {  }
 	}
 }
