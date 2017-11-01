@@ -7,6 +7,7 @@ $(document).ready(function(){
 });
 
 function removeMenuScrolling() {
+	
 	if(screen.width < 400) {
 		$('.hamburger').addClass('hamburger--mobile');
 	}

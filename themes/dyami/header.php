@@ -61,7 +61,7 @@
 				<!-- /Equalizer Icon -->
 				
 				<!-- Social Icons -->
-				<div class="small-3 columns text-center show-for-medium top-bar__social-icons" data-equalizer-watch>
+				<div class="small-3 columns text-center show-for-medium top-bar__social-icons show-for-large" data-equalizer-watch>
 					<ul class="">
 						<li><a href="#!" title="Facebook Profile"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
 						<li><a href="#!" title="Twitter Profile"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -105,4 +105,8 @@
 	</header>
 	<script>templateURL = '<?php bloginfo("template_directory"); ?>';</script>
 	<section class="container clearfix">
-		<?php do_action( 'foundationpress_after_header' );
+	
+	<?php do_action( 'foundationpress_after_header' ); ?>
+
+	<section id="home" class="home-hero" style="background-image: url( <?php echo content_url() . '/themes/dyami/assets/images/home/home-hero.png'; ?>);background-position: center center;background-size:cover">
+	</section>
