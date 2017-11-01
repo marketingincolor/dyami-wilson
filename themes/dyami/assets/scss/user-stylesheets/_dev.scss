@@ -228,8 +228,9 @@ footer {
 	    	top: 40%;
 		}
 
-		&-list { 
+		&-list {
 
+			margin: 0rem;
 			@include breakpoint(small) {
 				font-size: .75rem;
 			}
@@ -239,8 +240,30 @@ footer {
 			margin-bottom: 10%; 
 
 			& li ul { margin-left: 0rem; }
-			& li:first-child ul li { margin-right: .75rem; }
-			& li:not(:first-child) ul li { display: list-item; margin-right: .75rem; margin-left: .75rem; }
+
+			& li:first-child ul li { 
+				@include breakpoint(small) {
+					margin-right: .5rem;
+				}
+				@include breakpoint(medium) {
+					margin-right: .75rem; 
+				}
+			}
+
+			& li:not(:first-child) ul li { 
+				display: list-item; 
+
+				@include breakpoint(small) {
+					margin-right: .5rem; 
+					margin-left: .5rem; 					
+				}
+
+				@inclue breakpoint(medium) {
+					margin-right: .75rem; 
+					margin-left: .75rem; 
+				}
+			}
+
 			& li span { color:$white; }
 			& li { display: inline-block; color: $white; }
 
