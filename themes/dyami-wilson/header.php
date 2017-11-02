@@ -48,7 +48,7 @@
 
 				<!-- Equalizer Icon -->
 				<div class="small-6 columns top-bar__equalizer-icon" data-equalizer-watch>
-					<a href="<?php echo site_url(); ?>" title="Home"><img src="<?php echo get_stylesheet_directory_uri() .'/assets/images/icons/logo-white.png'; ?>" alt="Equalizer Icon"></a>
+					<a href="<?php echo site_url(); ?>" title="Home"><img src="<?php echo get_stylesheet_directory_uri() .'/assets/images/icons/white-logo.png'; ?>" alt="Equalizer Icon"></a>
 				</div>
 				<!-- /Equalizer Icon -->
 				
@@ -64,14 +64,6 @@
 				<!-- /Social Icons -->
 
 			</div>
-
-			<!-- Name Logo -->
-			<div class="row">
-				<div class="small-12 columns text-center top-bar__name">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/dyami-wilson-logo.png'; ?>" alt="Dyami Wilson Logo" />
-				</div>
-			</div>
-			<!-- /Name Logo -->
 		</nav>
 
 		<!-- HIDE THIS FOR NOW. -->

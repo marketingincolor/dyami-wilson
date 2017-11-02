@@ -18,13 +18,8 @@
 			?>
 
 				<div class="clearfix feat-work-container" style="display:flex;align-items: center;margin-bottom: 10%;">
-					<div class="medium-5 large-4 columns">
-						<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p></div>
-						<p><?php echo wp_trim_words(get_the_content(),30,'...') ?></p>
-						<p><a href="<?php the_permalink(); ?>" class="black-link">View Project</a></p>
-					</div>
-					<div class="medium-6 large-7 medium-offset-1 columns">
-						<!-- <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="shadow"> -->
+					
+					<div class="medium-6 large-7 medium-offset-1 large-push-5 columns">
 
 						<?php if (has_post_format('audio')) { ?>
 								
@@ -46,6 +41,11 @@
 
 						<?php } ?>
 					</div>
+					<div class="medium-5 large-4 large-pull-8 columns">
+						<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p></div>
+						<p><?php echo wp_trim_words(get_the_content(),30,'...') ?></p>
+						<p><a href="<?php the_permalink(); ?>" class="black-link">View Project</a></p>
+					</div>
 				</div>
 
 			<?php endwhile;wp_reset_postdata(); ?>
@@ -61,7 +61,7 @@
 				while ( $loop->have_posts() ) : $loop->the_post();
 			?>
 
-				<div style="display:flex;align-items: center;">
+				<div class="clearfix feat-work-container" style="display:flex;align-items: center;">
 					<div class="medium-6 large-7 columns">
 
 						<?php if (has_post_format('audio')) { ?>
