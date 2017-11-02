@@ -1,7 +1,12 @@
 <section class="related-posts">
 		<div class="row">
 			<div class="small-12 columns">
-				<h3>Other <?php echo $post_category[0]->name ?> Projects</h3>
+				
+				<?php if($post_category[0]->name != 'Featured') { ?>
+				  <h3>Other <?php echo $post_category[0]->name ?> Projects</h3>
+				<?php }else{ ?>
+				  <h3>Other <?php echo $post_category[1]->name ?> Projects</h3>
+				<?php } ?>
 			</div>
 
 		<?php
