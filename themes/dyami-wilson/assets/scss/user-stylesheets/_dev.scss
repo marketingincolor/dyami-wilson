@@ -1,0 +1,261 @@
+/* =========================================== */
+/* ============= Footer Styles ============== */
+/* =========================================== */
+
+footer {
+	color: #ffffff;
+	background-color: #000000;
+	h2 { 
+		margin: 0;
+	}
+	label {
+		display:none;
+	}
+	// Overide Foundation Inputs 
+	textarea, 
+	textarea:focus,
+	input[type="text"], 
+	input[type="text"]:focus,
+	input[type="email"],
+	input[type="email"]:focus,
+	input[type="tel"],
+	input[type="tel"]:focus { 
+		background: #000000;
+		border: 4px solid $white;
+		color: $white;
+		padding: 20px;  
+	}
+	input[type="button"] { 
+		@include btn-white-inverse();
+
+	}
+	
+
+	// Overides for input button
+	.field-wrap input[type="button"] { 
+
+		@include breakpoint(small) { width: 100%; }
+		@include breakpoint(large) { width: auto; }
+
+	}
+
+	// Contact Form Styles 
+	#ninja_forms_required_items, .nf-field-container { margin: 20px 0px; }
+	nf-field .textarea-container { margin-bottom: 30px; }
+	.nf-error-msg { color: #ffffff; }
+	.nf-error .ninja-forms-field { border: 4px dashed $white; }
+	.nf-error-field-errors { display:none; }
+	textarea{
+		resize:none;
+	}
+	
+	// Collapse padding from foundation
+	&.footer { padding-top: 0px; }
+
+	.footer {
+
+		// Diagonal Section
+		&__diagonal { 
+			height: 316px; 
+			background: $white;
+			background: linear-gradient(to left bottom, $white 50%, $black 50%); 
+		}
+		// Text Above Form
+		&__pre-form { 
+			margin: 0px 0px 75px 0px; 
+			&-email {
+				margin-bottom: 10%; 
+				text-decoration: underline;
+				a {
+					color: $white;
+				} 
+			}
+			&-phone {
+				margin-bottom: 0;
+			}
+		}
+
+		// Social Links Block
+		&__social-links {
+			&-layout {
+				ul li { 
+					display:inline-block;  
+					padding-right: 20px; 
+					margin-bottom: 25px; 
+					cursor: pointer;  
+					i {
+						color: #ffffff;
+						font-size:24px;
+					}
+				}
+				ul li:last-child { padding-right: 0px; }
+			}
+		}
+
+		// Scroll To Top
+		&__back-to-top-layout {
+			&-btn {
+				@include btn-back-to-top();
+				padding: 20px 15px;
+				border-right: 0px;
+			}
+			&-caret-container{
+				@include btn-white-inverse();
+				padding: 20px;
+			}
+		}
+
+		// Legal
+
+		&__legal { 
+			& a { color: $white; }
+		}
+
+
+	}
+
+
+}
+
+/* =========================================== */
+/* ============= Header Styles =============== */
+/* =========================================== */
+
+.fixed { position: fixed !important; }
+.relative { position: relative; }
+
+.top-bar {
+
+	padding: .5rem 0rem;
+	z-index: 99;
+
+	&__wrapper { padding-bottom: 18px; 
+	}
+    position: absolute;
+    background-color: transparent;
+    top: 50px;
+    width: 100%;
+	
+	&__hamburger-menu { 
+		
+		.hamburger { 
+			position: fixed; 
+			@include breakpoint(small) {
+				left: 10px;
+			}
+			@include breakpoint(medium) {
+				left: 20px;
+			}
+		    top: 58px;
+			align-items: center;
+
+		}
+
+		&--scrolling {
+			position: fixed !important;
+			top: 50px;
+		    background-color: $black;
+		    padding: 15px;
+		    width: 50px;
+		    position: fixed;
+		    top: 50px;
+		    cursor: pointer;
+		    z-index: 99;
+		    color: $white;
+
+		    .top-line,.middle-line, .bottom-line { 
+		    	height: 3px;
+    			background-color: $white;
+    			width: 15px;
+    			margin-bottom: 3px;
+    		}
+		}
+
+
+	}
+
+    &__equalizer-icon { 
+
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+
+    }
+
+    &__social-icons { 
+		float:right;
+		background-color: transparent !important;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center; 
+
+			ul { 
+				background-color: 
+				transparent; 
+				margin-bottom:0rem;
+			}
+
+			li { padding-right: 20px; 
+
+				& a { color: $white; }
+				& i { font-size: 24px; }
+			}
+
+			
+
+			& li { display:inline-block; }
+
+    }
+
+    &__name { }
+
+}
+
+/* =========================================== */
+/* ============= UTILITY ===================== */
+/* =========================================== */
+
+.shadow {
+	box-shadow: 0px 0px 80px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================================== */
+/* ============= HOME ===================== */
+/* =========================================== */
+
+.home-hero {
+
+	height: 100vh; 
+	&__layout {
+
+		position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+		top: 50%;
+
+		&-h1{
+			@include breakpoint(small){
+				font-size: 1.6em;
+			}
+			@include breakpoint(medium){
+				font-size: 3em;
+			}
+			@include breakpoint(large){
+				font-size: 3.8em;
+			}
+		}
+	}
+}
+
+/* =============================================== */
+/* ============= SINGLE PAGE ===================== */
+/* =============================================== */
+
+.single-page {
+	transform: skewY(10deg);
+	background-color: $white;
+
+	&__article {
+		transform: skewY(-10deg);
+	}
+}
