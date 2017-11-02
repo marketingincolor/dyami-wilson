@@ -44,7 +44,7 @@
 				<?php } ?>
 
 				<!-- Project title/author/content (meta) -->
-				<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo 'Demo';} ?></p></div>
+				<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p></div>
 				<p class="description">
 					<?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?>
 				</p>

@@ -34,7 +34,7 @@
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
-			<a href="<?php echo site_url(). '/work'; ?>"><button class="hvr-rectangle-out btn-black">Back To All Projects</button></a>
+			<a href="<?php echo site_url(). '/work'; ?>"><button class="hvr-rectangle-out btn-black"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back To All Projects</button></a>
 		</div>
 	</div>
 </section>

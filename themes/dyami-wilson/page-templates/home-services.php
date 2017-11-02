@@ -33,7 +33,9 @@
 
 <section class="services2">
 	<div class="row expanded columns">
-		<img src="<?php bloginfo('template_directory'); ?>/assets/images/home/services-full-img.jpg" alt="">
+		<div class="background" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/home/services-full-img.jpg)"></div>
+
+		<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/home/services-full-img.jpg" alt=""> -->
 	</div>
 	<div class="row">
 		<div class="medium-5 medium-offset-1 columns">

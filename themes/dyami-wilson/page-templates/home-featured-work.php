@@ -19,7 +19,7 @@
 
 				<div class="clearfix feat-work-container" style="display:flex;align-items: center;margin-bottom: 10%;">
 					<div class="medium-5 large-4 columns">
-						<h3><?php the_title(); ?></h3>
+						<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p></div>
 						<p><?php echo wp_trim_words(get_the_content(),30,'...') ?></p>
 						<p><a href="<?php the_permalink(); ?>" class="black-link">View Project</a></p>
 					</div>
@@ -86,7 +86,7 @@
 												
 					</div>
 					<div class="medium-5 large-4 columns">
-						<h3><?php the_title(); ?></h3>
+						<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p></div>
 						<p><?php echo wp_trim_words(get_the_content(),30,'...') ?></p>
 						<p><a href="<?php the_permalink(); ?>" class="black-link">View Project</a></p>
 					</div>
