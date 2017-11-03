@@ -115,10 +115,10 @@ header("HTTP/1.1 200 OK");
 	  				</p>
 	  				<a href="<?php the_permalink(); ?>"><button class="hvr-rectangle-out btn-black">View Project</button></a>
 	  			</div>
-
+			</section>
           <?php }else if ($count_faqs >= 3) { ?>
 	  		
-	  			  <div class="small-12 medium-4 columns end" style="margin-bottom:50px">
+	  			  <div class="small-12 medium-6 columns end" style="margin-bottom:50px">
 
 								<?php if (has_post_format('audio')) { ?>
 
@@ -141,7 +141,7 @@ header("HTTP/1.1 200 OK");
 		  					<?php } ?>
 
 	  				<h3><?php the_title(); ?></h3>
-	  				<p><?php the_author(); ?></p>
+	  				<p><?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p>
 	  				<p class="description">
 	  					<?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?>
 	  				</p>

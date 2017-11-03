@@ -22,10 +22,10 @@ h1,h2,h3{
 h3{
 	@include font(36);
 	@include breakpoint(medium down){
-	  @include font(32);
+	  @include font(28);
 	}
 	@include breakpoint(small only){
-		@include font(28);
+		@include font(26);
 	}
 }
 .service-box{
@@ -197,7 +197,7 @@ h3{
 		top: 0;
 		transition: left 0.4s ease-in-out;
 	}
-	@include breakpoint(large) {
+	@include breakpoint(medium) {
 		left: -100%;
 		max-width: 300px;
 		padding: 20% 3%;
@@ -258,10 +258,10 @@ h3{
 	top: -150px;
 	background-color: $white;
 	@include breakpoint(medium down){
-		padding: 10% 0 10%
+		padding: 10% 20px 0;
 	}
 	@include breakpoint(small only){
-		padding: 10% 0 15%
+		padding: 10% 20px 15%
 	}
 	.row,.main-content{
 		transform: skewY(-10deg);
@@ -283,7 +283,7 @@ h3{
 	padding: 25% 0 60px;
 	margin-top: -25%;
 	@include breakpoint(medium down){
-		margin-top: -40%;
+		margin-top: -37%;
 	}
 	@include breakpoint(small only){
 		margin-top: -55%;
@@ -419,7 +419,7 @@ h3{
 }
 .home .feat-img-cont{
 	background-size: 100%;
-	@include breakpoint(small only){
+	@include breakpoint(medium down){
 		background-size: cover;
 	}
 	&:hover{

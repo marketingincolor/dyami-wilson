@@ -19,7 +19,7 @@
 
 				<div class="clearfix feat-work-container" style="display:flex;align-items: center;margin-bottom: 10%;">
 					
-					<div class="medium-6 large-7 medium-offset-1 large-push-5 columns">
+					<div class="medium-6 large-7 large-offset-1 medium-push-6 columns">
 
 						<?php if (has_post_format('audio')) { ?>
 								
@@ -41,7 +41,7 @@
 
 						<?php } ?>
 					</div>
-					<div class="medium-5 large-4 large-pull-8 columns">
+					<div class="medium-5 large-4 medium-pull-5 columns">
 						<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p></div>
 						<p><?php echo wp_trim_words(get_the_content(),30,'...') ?></p>
 						<p><a href="<?php the_permalink(); ?>" class="black-link">View Project</a></p>
