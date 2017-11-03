@@ -86,7 +86,7 @@ header("HTTP/1.1 200 OK");
 					<!-- If there is only 2 posts in the category -->
           <?php }else if ($count_faqs == 2) { ?>
 	  		
-	  			<div class="small-12 medium-6 columns">
+	  			<div class="small-12 medium-6 columns end">
 		  			
 		  			<?php if (has_post_format('audio')) { ?>
 
@@ -115,10 +115,10 @@ header("HTTP/1.1 200 OK");
 	  				</p>
 	  				<a href="<?php the_permalink(); ?>"><button class="hvr-rectangle-out btn-black">View Project</button></a>
 	  			</div>
-			</section>
+			
           <?php }else if ($count_faqs >= 3) { ?>
 	  		
-	  			  <div class="small-12 medium-6 columns end" style="margin-bottom:50px">
+	  			  <div class="small-12 medium-6 large-4 columns end" style="margin-bottom:50px">
 
 								<?php if (has_post_format('audio')) { ?>
 

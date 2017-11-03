@@ -38,6 +38,11 @@ h3{
 	@include breakpoint(small only){
 		padding: 20px;
 	}
+	&:first-of-type{
+		@include breakpoint(small only){
+			margin-bottom: 30px;
+		}
+	}
 	.service-meta{
 		margin-bottom: 30px;
 	}
@@ -191,19 +196,29 @@ h3{
 		position: fixed;
 		left: -100%;
 		height: 100vh;
-		padding: 45% 10%;
+		padding: 0% 10%;
 		z-index: 100;
 		background-color: $white;
 		top: 0;
-		transition: left 0.4s ease-in-out;
+		transition: left 0.5s ease-out;
 	}
 	@include breakpoint(medium) {
-		left: -100%;
 		max-width: 300px;
-		padding: 20% 3%;
+		padding: 0 3%;
+		border-right: 1px solid $black;
+	}
+	@include breakpoint(large) {
+		left: -33%;
+		max-width: 300px;
+		padding: 0 3%;
 	}
 	&.slide-in{
 		left: 0;
+	}
+	#left-menu-wrap{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 	.menu-close{
 		position: absolute;
@@ -242,29 +257,37 @@ h3{
 /* ================ Home Page ================ */
 /* =========================================== */
 .home-hero{
+	height: 120vh;
 	.tagline{
 		color: $white;
 		padding-bottom: 10%;
+		// display: none;
 		@include breakpoint(small only){
 			font-size: 14px;
 		}
 	}
 }
+.home .featured-work{
+	padding: 10% 0 15%;
+	@media (max-width:1300px){
+		padding-top: 15%;
+	}
+}
 .featured-work{
-	padding: 10% 0 0;
-	transform: skewY(10deg);
+	padding: 15% 0 0;
+	transform: skewY(12deg);
 	position: relative;
 	z-index: 12;
 	top: -150px;
 	background-color: $white;
 	@include breakpoint(medium down){
-		padding: 10% 20px 0;
+		padding: 15% 20px 0;
 	}
 	@include breakpoint(small only){
-		padding: 10% 20px 15%
+		padding: 15% 20px 15%
 	}
 	.row,.main-content{
-		transform: skewY(-10deg);
+		transform: skewY(-12deg);
 	}
 	.row{
 		margin-top: -5%;
@@ -280,17 +303,20 @@ h3{
 }
 .services{
 	background-color: $black;
-	padding: 25% 0 60px;
-	margin-top: -25%;
+	padding: 10% 0 60px;
+	margin-top: -15%;
+	position: relative;
+	z-index: 12;
 	@include breakpoint(medium down){
-		margin-top: -37%;
+		margin-top: -28%;
 	}
 	@include breakpoint(small only){
-		margin-top: -55%;
+		margin-top: 40%;
 	}
 	h2{
 		@include breakpoint(medium down){
 			margin-bottom: 10%;
+			padding-left: 20px;
 		}
 	}
 	.row.expanded{
@@ -314,6 +340,9 @@ h3{
 .services2{
 	background-color: $black;
 	padding: 10% 0 5%;
+	@include breakpoint(small only){
+		padding-bottom: 0;
+	}
 	.row.expanded{
 		padding: 0;
 		img{
@@ -332,6 +361,12 @@ h3{
 			@include breakpoint(small only){
 				height: 250px;
 			}
+		}
+	}
+	.box-row{
+		@include breakpoint(medium down){
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 	.service-box{
@@ -367,18 +402,30 @@ h3{
 /* ================ Work Page ================ */
 /* =========================================== */
 .work-hero{
-	z-index: 13;
-	position: relative;
-	img{
-		width: 100%;
-	}
+	// z-index: 13;
+	// position: relative;
+	// img{
+	// 	width: 100%;
+	// }
 }
-.page-template-page-work{
+.page-template-page-work,.page-template-default{
+	.work-hero{
+		height: 100vh;
+		@include breakpoint(medium down){
+			height: 75vh;
+		}
+		@media(min-width:1600px){
+			height: 100vh;
+		}
+	}
+	&.home .featured-work{
+		top: -205px;
+	}
 	.featured-work{
-		transform: skewY(0);
-		.row{
-			transform: skewY(0);
-			margin-top: 0;
+		top: -360px;
+		margin-bottom: -280px;
+		@include breakpoint(small only){
+			margin-bottom: -380px;
 		}
 		h1{
 			font-size: 60px;
@@ -422,10 +469,15 @@ h3{
 	@include breakpoint(medium down){
 		background-size: cover;
 	}
+	.play i{
+		transition:all 0.25s ease-in-out
+	}
 	&:hover{
-		background-size: 110%;
+		@include breakpoint(large){
+			background-size: 105%;
+		}
 		.play i{
-			transform: scale(1.06);
+			transform: scale(1.05);
 			color: $white;
 		}
 	}
@@ -439,6 +491,7 @@ h3{
 	margin-bottom: 1.9375rem;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
+	outline: none;
 	@include breakpoint(small only){
 		height: 250px;
 	}
@@ -458,6 +511,9 @@ h3{
 		p{
 			margin:0;
 			color: $white;
+			font-size: 14px;
+	    text-transform: uppercase;
+	    font-weight: 700;
 		}
 		i{
 			color: rgba(255,255,255,0.5);
@@ -477,11 +533,21 @@ h3{
 	padding-bottom: 10%;
 }
 .featured-post{
+	@include breakpoint(small only){
+		padding-left:20px;
+		padding-right:20px;
+	}
 	.row{
 		margin-top: -28%;
+		@include breakpoint(small only){
+			margin-top: -15%;
+		}
 	}
 }
 .related-posts{
+	@include breakpoint(medium down){
+		padding: 0 20px 10%;
+	}
 	h3{
 		text-transform: uppercase;
 		margin-bottom: 50px;

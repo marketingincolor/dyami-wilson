@@ -37,15 +37,15 @@
 
 		<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/home/services-full-img.jpg" alt=""> -->
 	</div>
-	<div class="row">
-		<div class="medium-5 medium-offset-1 columns">
+	<div class="row box-row">
+		<div class="medium-6 large-5 large-offset-1 columns">
 			<div class="service-box">
 				<h3><?php the_field('third_service_title'); ?></h3> 
 				<a href="<?php echo site_url().'/work'; ?>" class="white-link">View Projects</a>
 				<p><?php the_field('third_service_description'); ?></p>
 			</div>
 		</div>
-		<div class="medium-5 columns end">
+		<div class="medium-6 large-5 columns end">
 			<div class="service-box">
 				<h3><?php the_field('fourth_service_title'); ?></h3>
 				<a href="<?php echo site_url().'/work'; ?>" class="white-link">View Projects</a>

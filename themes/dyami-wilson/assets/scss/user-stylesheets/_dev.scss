@@ -45,12 +45,21 @@ footer {
 	.nf-error-msg { color: #ffffff; }
 	.nf-error .ninja-forms-field { border: 4px dashed $white; }
 	.nf-error-field-errors { display:none; }
+	.ninja-forms-req-symbol{
+		color: $white;
+	}
 	textarea{
 		resize:none;
 	}
 	
 	// Collapse padding from foundation
-	&.footer { padding-top: 0px; }
+	&.footer {
+		padding-top: 0px;
+		@include breakpoint(small only){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
 
 	.footer {
 
@@ -94,6 +103,10 @@ footer {
 
 		// Scroll To Top
 		&__back-to-top-layout {
+			.back-top-container{
+				position: relative;
+				right: 30px;
+			}
 			&-btn {
 				@include btn-back-to-top();
 				padding: 20px 15px;
@@ -174,12 +187,15 @@ footer {
 
 	}
 
-    &__equalizer-icon { 
-
-		display: flex;
-		justify-content: center;
-		align-items: center; 
-
+    &__equalizer-icon {
+			display: flex;
+			justify-content: center;
+			align-items: center; 
+			img{
+				@include breakpoint(medium down){
+					width: 80%;
+				}
+			}
     }
 
     &__social-icons { 
@@ -224,15 +240,16 @@ footer {
 /* =========================================== */
 
 .home-hero {
-
-	height: 100vh; 
 	&__layout {
-
+		opacity:0;
 		position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-		top: 50%;
-
+		top: 60%;
+		z-index: 14;
+		@include breakpoint(medium down){
+			top: 50%;
+		}
 		&-h1{
 			@include breakpoint(small){
 				font-size: 1.6em;

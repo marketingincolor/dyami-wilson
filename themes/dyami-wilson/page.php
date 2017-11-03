@@ -8,21 +8,22 @@
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
+<section class="work-hero">
+	<img src="<?php bloginfo('template_directory'); ?>/assets/images/work/work-hero.jpg" alt="">
+</section>
 
-<div class="main-wrap" role="main">
-
-<?php do_action( 'foundationpress_before_content' ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-		<header>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-		</header>
-		<div class="row single__layout">
-			<div class="single__layout-content">
-				<?php the_content(); ?>
+	<article <?php post_class('featured-work') ?> id="post-<?php the_ID(); ?>">
+		<div class="row">
+			<div class="small-12 columns">
+				<header>
+					<h1 class="entry-title"><?php the_title(); ?></h1>
+				</header>
+				<div class="single__layout-content">
+					<?php the_content(); ?>
+				</div>
 			</div>
 		</div>
 	</article>
@@ -30,5 +31,4 @@ get_header(); ?>
 <?php endwhile;?>
 
 
-</div>
 <?php get_footer();

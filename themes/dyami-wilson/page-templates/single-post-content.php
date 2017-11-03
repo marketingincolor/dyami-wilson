@@ -4,7 +4,7 @@
 
 <section class="featured-post">
 	<div class="row">
-		<div class="large-6 medium-8 columns medium-centered">
+		<div class="large-6 medium-10 columns medium-centered">
 			<!-- Featured image -->
 				
 				<?php if(has_post_format('audio')) { ?>

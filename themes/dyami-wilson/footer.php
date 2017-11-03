@@ -8,6 +8,7 @@
  * @since FoundationPress 1.0.0
  */
   get_template_part('page-templates/left-menu');
+  $options = get_option('mic_theme_options');
 ?>
 
 		</section>
@@ -20,11 +21,22 @@
 				<!-- Form Section -->
 				<section class="footer__pre-form">
 					<div class="row">
-						<div class="small-8 small-offset-2 columns text-left">
+						<div class="medium-10 medium-offset-1 columns text-left">
 							<section class="footer-top-container">
-								<h2>Contact</h2>
-								<p class="footer__pre-form-phone">727.831.1377</p>
-								<p class="footer__pre-form-email"><a href="mailto:dyamiwilsonmusic@gmail.com">dyamiwilsonmusic@gmail.com</a></p>
+								<h2><?php echo $options['footer_title']; ?></h2>
+
+								<?php if ($options['footer_phone']) { ?>
+									
+								<p class="footer__pre-form-phone"><?php echo $options['footer_phone']; ?></p>
+
+								<?php } ?>
+
+								<?php if ($options['footer_email']) { ?>
+									
+								<p class="footer__pre-form-email"><a href="mailto:<?php echo $options['footer_email']; ?>"><?php echo $options['footer_email']; ?></a></p>
+
+								<?php } ?>
+
 							</section>
 
 							<section class="footer__form">
@@ -40,10 +52,33 @@
 					<div class="row footer__social-links-layout">
 						<div class="small-12 medium-4 small-centered columns">
 							<ul class="text-center">
-								<li><a href="#!" title="Facebook Profile"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-								<li><a href="#!" title="Twitter Profile"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a href="#!" title="Spotify Profile"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
-								<li><a href="#!" title="SoundCloud"><i class="fa fa-soundcloud" aria-hidden="true"></i></a></li>
+
+								<?php if ($options['facebook_link']) { ?>
+
+									<li><a href="<?php echo $options['facebook_link']; ?>" title="Facebook Profile"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+									
+								<?php }if ($options['twitter_link']) { ?>
+
+									<li><a href="<?php echo $options['twitter_link']; ?>" title="Twitter Profile"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+
+								<?php }if ($options['spotify_link']) { ?>
+									
+									<li><a href="<?php echo $options['spotify_link']; ?>" title="Spotify Profile"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
+
+								<?php }if ($options['soundcloud_link']) { ?>
+
+									<li><a href="<?php echo $options['soundcloud_link']; ?>" title="SoundCloud"><i class="fa fa-soundcloud" aria-hidden="true"></i></a></li>
+
+								<?php }if ($options['youtube_link']) { ?>
+
+									<li><a href="<?php echo $options['youtube_link']; ?>" title="SoundCloud"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+
+								<?php }if ($options['linkedin_link']) { ?>
+
+									<li><a href="<?php echo $options['linkedin_link']; ?>" title="SoundCloud"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+
+								<?php } ?>
+								
 							</ul>
 						</div>
 					</div>
@@ -52,17 +87,19 @@
 
 				<!-- Legal -->
 				<section class="footer__legal">
-					<p class="text-center">Copyright &copy; <?php echo date('Y') . ' Dyami Wilson'; ?> | <a href="#!" title="Privacy Policy">Privacy Policy</a></p>
+					<p class="text-center">Copyright &copy; <?php echo date('Y') . ' Dyami Wilson'; ?> | <a href="<?php echo site_url().'/privacy-policy'; ?>" style="text-decoration: underline" title="Privacy Policy">Privacy Policy</a></p>
 				</section>
 				<!-- /Legal -->
 				
 				<!-- Scroll To Top -->
 				<section class="footer__back-to-top">
 					<div class="row expanded footer__back-to-top-layout" data-equalizer>
-						<div class="footer__back-to-top-layout-caret-container" data-equalizer-watch>
-							<i class="fa fa-caret-up" aria-hidden="true"></i>
+						<div class="back-top-container">
+							<div class="footer__back-to-top-layout-caret-container" data-equalizer-watch>
+								<i class="fa fa-caret-up" aria-hidden="true"></i>
+							</div>
+							<button class="footer__back-to-top-layout-btn show-for-medium" data-equalizer-watch>Back To Top</button>
 						</div>
-						<button class="footer__back-to-top-layout-btn show-for-medium" data-equalizer-watch>Back To Top</button>
 					</div>
 				</section>
 				<!-- /Scroll To Top -->

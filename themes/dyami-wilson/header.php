@@ -7,13 +7,22 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+  $options = get_option('mic_theme_options');
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<?php if ($options['webmaster_tools']) { ?>
+		  <?php echo $options['webmaster_tools']; ?>
+		<?php } ?>
+
+		<?php if ($options['ga_code']) { ?>
+		  <?php echo $options['ga_code']; ?>
+		<?php } ?>
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -47,7 +56,7 @@
 				<!-- /Hamburger Menu -->
 
 				<!-- Equalizer Icon -->
-				<div class="small-6 columns top-bar__equalizer-icon" data-equalizer-watch>
+				<div class="small-6 columns top-bar__equalizer-icon text-center" data-equalizer-watch>
 					<a href="<?php echo site_url(); ?>" title="Home"><img src="<?php echo get_stylesheet_directory_uri() .'/assets/images/icons/white-logo.png'; ?>" alt="Equalizer Icon"></a>
 				</div>
 				<!-- /Equalizer Icon -->
@@ -55,10 +64,32 @@
 				<!-- Social Icons -->
 				<div class="small-3 columns text-center show-for-medium top-bar__social-icons show-for-large" data-equalizer-watch>
 					<ul class="">
-						<li><a href="#!" title="Facebook Profile"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-						<li><a href="#!" title="Twitter Profile"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href="#!" title="Spotify Profile"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
-						<li><a href="#!" title="SoundCloud"><i class="fa fa-soundcloud" aria-hidden="true"></i></a></li>
+
+						<?php if ($options['facebook_link']) { ?>
+
+							<li><a href="<?php echo $options['facebook_link']; ?>" title="Facebook Profile"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+							
+						<?php }if ($options['twitter_link']) { ?>
+
+							<li><a href="<?php echo $options['twitter_link']; ?>" title="Twitter Profile"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+
+						<?php }if ($options['spotify_link']) { ?>
+							
+							<li><a href="<?php echo $options['spotify_link']; ?>" title="Spotify Profile"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
+
+						<?php }if ($options['soundcloud_link']) { ?>
+
+							<li><a href="<?php echo $options['soundcloud_link']; ?>" title="SoundCloud"><i class="fa fa-soundcloud" aria-hidden="true"></i></a></li>
+
+						<?php }if ($options['youtube_link']) { ?>
+
+							<li><a href="<?php echo $options['youtube_link']; ?>" title="SoundCloud"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+
+						<?php }if ($options['linkedin_link']) { ?>
+
+							<li><a href="<?php echo $options['linkedin_link']; ?>" title="SoundCloud"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+
+						<?php } ?>
 					</ul> 
 				</div>
 				<!-- /Social Icons -->
