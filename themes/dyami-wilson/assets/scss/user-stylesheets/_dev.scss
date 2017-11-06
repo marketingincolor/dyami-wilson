@@ -141,14 +141,19 @@ footer {
 
 	padding: .5rem 0rem;
 	z-index: 99;
-
-	&__wrapper { padding-bottom: 18px; 
+	padding-top: 0;
+	top: 30px;
+	position: absolute;
+	background-color: transparent;
+	width: 100%;
+	img{
+		@include breakpoint(medium){
+			width: 80%;
+		}
 	}
-    position: absolute;
-    background-color: transparent;
-    top: 50px;
-    width: 100%;
-	
+	&__wrapper {
+		padding-bottom: 18px; 
+	}
 	&__hamburger-menu { 
 		
 		.hamburger { 
@@ -157,10 +162,9 @@ footer {
 				left: 10px;
 			}
 			@include breakpoint(medium) {
-				left: 20px;
+				left: 15px;
 			}
-		    top: 58px;
-			align-items: center;
+		  top: 15px;
 
 		}
 
@@ -199,11 +203,9 @@ footer {
     }
 
     &__social-icons { 
-		float:right;
+		text-align: right;
 		background-color: transparent !important;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center; 
+		
 
 			ul { 
 				background-color: 
@@ -245,7 +247,7 @@ footer {
 		position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-		top: 60%;
+		top: 55%;
 		z-index: 14;
 		@include breakpoint(medium down){
 			top: 50%;

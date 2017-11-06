@@ -2,7 +2,6 @@ $(document).ready(function(){
 	removeMenuScrolling();
 	filterWork();
 	audioVideoModal();
-	btnOutlineEffect();
 	openCloseMenu();
 
 	$('#home').find('.home-hero__layout')
@@ -12,31 +11,7 @@ $(document).ready(function(){
   },1000,function(){
   	
   });
-
-
 });
-
-function btnOutlineEffect(){
-	$('.btn-outline, .btn-flip, .btn-flop').each(function(){
-		if($(this).hasClass("btn-block")){
-			var thisCopy = $( this ).clone();
-			$( this ).wrap( "<div class='btn-effect btn-block' style='height:"+$(this).outerHeight()+"px'></div>" );
-		}else{
-			var thisCopy = $( this ).clone();
-			$( this ).wrap( "<div class='btn-effect' style='height:"+$(this).outerHeight()+"px'></div>" );
-		}
-		thisCopy.appendTo( $( this ).parent() );
-		$("<br/>").insertAfter( $(this).parent().find(".btn-outline:first-of-type") );
-
-		$( $(this).parent() ).unbind().hover(function(){
-			$(this).find('.btn:first-of-type').stop().animate({top:'-'+$(this).outerHeight()+'px'}, 250);
-			$(this).find('.btn:last-of-type').stop().animate({top:'-'+$(this).outerHeight()+'px'}, 250);
-		}, function(){
-			$(this).find('.btn:first-of-type').stop().animate({top:'0px'}, 250);
-			$(this).find('.btn:last-of-type').stop().animate({top:'0px'}, 250);
-		})
-	})
-}
 
 function removeMenuScrolling() {
 	
@@ -72,7 +47,6 @@ function openCloseMenu(){
 
 	// Close Left menu if user clicks anywehre outside the menu
 	$('section,.footer').click(function(){
-		console.log('clicked a section. Open should be true. Open real value is ' + open);
 		if (open == true) {
 			$('#left-menu').removeClass('slide-in');
 		}
