@@ -19,7 +19,7 @@
 			while ( $loop->have_posts() ) : $loop->the_post();
 		?>
 
-			<div class="medium-6 large-4 columns end">
+			<div class="medium-6 large-4 columns end" style="margin-bottom:40px">
 
 				<?php if(has_post_format('audio')) { ?>
 				
