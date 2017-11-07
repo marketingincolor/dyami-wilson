@@ -274,6 +274,10 @@ h3{
 	@media (max-width:1300px){
 		padding-top: 15%;
 	}
+	@include breakpoint(medium down){
+		padding-right: 20px;
+		padding-left: 20px;
+	}
 }
 .featured-work{
 	padding: 10% 0 0;
@@ -324,9 +328,13 @@ h3{
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
+		@include breakpoint(medium down){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 		@include breakpoint(small only){
 			background-position: -500px;
-		}	
+		}
 		&:last-of-type{
 			@include breakpoint(small only){
 				background-position: -300px;
@@ -590,6 +598,28 @@ h3{
 		width: 100%;
 	}
 }
+.entry-title{
+	@include font(60);
+	@include breakpoint(medium down){
+		@include font(40)
+	}
+	@include breakpoint(small only){
+		@include font(30)
+	}
+}
+.entry-title,.entry-author{
+	display:inline;
+}
+.entry-category{
+	@include font(30);
+	letter-spacing: 2px;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-top: -20px;
+}
+.entry-content{
+	margin: 40px 0;
+}
 .featured-post,.related-posts{
 	padding-bottom: 10%;
 }
@@ -612,5 +642,13 @@ h3{
 	h3{
 		text-transform: uppercase;
 		margin-bottom: 50px;
+		font-weight: 900;
+	}
+	.other-projects{
+		@include font(30);
+		letter-spacing: 2px;
+		@include breakpoint(small only){
+			@include font(24);
+		}
 	}
 }

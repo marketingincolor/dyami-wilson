@@ -1,5 +1,5 @@
 <section class="single-hero">
-	<img src="<?php bloginfo('template_directory'); ?>/assets/images/single/single-hero.jpg" alt="" style="width:100%">
+	<img src="<?php bloginfo('template_directory'); ?>/assets/images/single/single-hero1.jpg" alt="">
 </section>
 
 <section class="featured-post">
@@ -28,8 +28,22 @@
 				<?php } ?>
 
 			<!-- Post Title/Content -->
+
+			<?php 
+				$cats = get_the_category();
+				foreach ($cats as $the_cat) {
+					if ($the_cat->name == 'Featured') {
+						//do nothing
+					}else{
+						$the_category = $cat->name;
+						break;
+					}
+				}
+			?>
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<p class="entry-author"><?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p>
+				<h3 class="entry-category"><?php echo $the_category; ?></h3>
 			</header>
 			<div class="entry-content">
 				<?php the_content(); ?>

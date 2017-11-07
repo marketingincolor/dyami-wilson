@@ -33,7 +33,7 @@
 
 <section class="services2">
 	<div class="row expanded columns">
-		<div class="background" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/home/services-full-img.jpg)"></div>
+		<div class="background" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/home/dyami-fixed-bg.jpg)"></div>
 
 		<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/home/services-full-img.jpg" alt=""> -->
 	</div>

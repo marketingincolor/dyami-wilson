@@ -260,6 +260,8 @@ footer {
 		z-index: 14;
 		@include breakpoint(medium down){
 			top: 50%;
+			padding-right: 20px;
+			padding-left: 20px;
 		}
 		&-h1{
 			@include breakpoint(small){

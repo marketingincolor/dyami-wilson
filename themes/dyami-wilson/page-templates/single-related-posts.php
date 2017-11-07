@@ -3,9 +3,9 @@
 			<div class="small-12 columns">
 				
 				<?php if($post_category[0]->name != 'Featured') { ?>
-				  <h3>Other <?php echo $post_category[0]->name ?> Projects</h3>
+				  <h3 class="other-projects">Other <?php echo $post_category[0]->name ?> Projects</h3>
 				<?php }else{ ?>
-				  <h3>Other <?php echo $post_category[1]->name ?> Projects</h3>
+				  <h3 class="other-projects">Other <?php echo $post_category[1]->name ?> Projects</h3>
 				<?php } ?>
 			</div>
 
@@ -24,7 +24,7 @@
 				<?php if(has_post_format('audio')) { ?>
 				
 				<!-- Featured image -->
-				<div class="feat-img-cont shadow" data-audio="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background: url(<?php the_post_thumbnail_url(); ?>) center center no-repeat;background-size:cover;">
+				<div class="feat-img-cont vertical shadow" data-audio="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
 					<div class="play">
 						<p><i class="fa fa-volume-up" aria-hidden="true"></i></p>
 						<p>Play Audio</p>
@@ -34,7 +34,7 @@
 				<?php }else if(has_post_format('video')) { ?>
 
 				<!-- Featured image -->
-				<div class="feat-img-cont shadow" data-video="<?php the_field('file',$post->ID); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background: url(<?php the_post_thumbnail_url(); ?>) center center no-repeat;background-size:cover;">
+				<div class="feat-img-cont vertical shadow" data-video="<?php the_field('file',$post->ID); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
 					<div class="play">
 						<p><i class="fa fa-play-circle" aria-hidden="true"></i></p>
 						<p>Play Video</p>
