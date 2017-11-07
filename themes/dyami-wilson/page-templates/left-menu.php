@@ -1,5 +1,5 @@
 <aside class="left-menu" id="left-menu">
-	<button class="menu-close">X</button>
+	<button class="menu-close"><i class="fa fa-times" aria-hidden="true"></i></button>
 	<div id="left-menu-wrap">
 		<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/logo-black.jpg" alt="">
 		

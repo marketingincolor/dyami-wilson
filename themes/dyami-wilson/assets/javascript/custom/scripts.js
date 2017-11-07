@@ -5,11 +5,11 @@ $(document).ready(function(){
 	openCloseMenu();
 
 	$('#home').find('.home-hero__layout')
-  // .slideDown('slow')
-  .animate({
-  	opacity: 1
-  },1000,function(){
-  	
+	  // .slideUp('slow')
+	  .animate({
+	  	opacity: 1,
+	  	top: '50%'
+	  },1000,function(){
   });
 });
 
@@ -31,24 +31,45 @@ function removeMenuScrolling() {
 // Open and close the left menu
 function openCloseMenu(){
 	var open = false;
+
 	// Open left menu
-	
-		$('#hamburger,.top-line,.middle-line,bottom-line').on('click',function(){
-			$('#left-menu').addClass('slide-in');
-			open = true;
-		});
+	$('#hamburger,.top-line,.middle-line,bottom-line').on('click',function(){
+		$('#left-menu').addClass('slide-in');
+		open = true;
+	});
 
 	// Close left menu
-	
-		$('.menu-close,#left-menu-list a').on('click',function(){
-			$('#left-menu').removeClass('slide-in');
-			open = false;
-		});
+	$('.menu-close,#menu-item-17').on('click',function(){
+		$('#left-menu').removeClass('slide-in');
+		open = false;
+	});
 
 	// Close Left menu if user clicks anywehre outside the menu
-	$('section,.footer').click(function(){
+	$('#home,#featured-work,#services,.services2,#meet-dyami,.footer').click(function(){
 		if (open == true) {
 			$('#left-menu').removeClass('slide-in');
+		}
+	});
+}
+
+// Ajax logic. Private Function called only by other functions
+function ajaxWork(url){
+	$.ajax({
+		type: 'GET',
+		url: url,
+		success: function(response){
+			// Remove all HTML before appending new html
+			$('#work-container').html('');
+			$('#work-container').css({'opacity':0})
+			// Add data into work container
+			$('#work-container').append(response);
+			// Animate opacity for fade in effect of all work projects
+			$('#work-container').animate({
+			  	opacity: 1,
+			  },1000,function(){
+		  });
+			// Call modal function after every ajax call
+			audioVideoModal();
 		}
 	});
 }
@@ -66,16 +87,8 @@ function filterWork(cat){
 		}else{
 			var url = templateURL + '/ajax-search.php?cat=' + cat;
 		}
-
-		$.ajax({
-			type: 'GET',
-			url: url,
-			success: function(response){
-				$('#work-container').html('');
-				$('#work-container').append(response);
-				audioVideoModal();
-			}
-		});
+		ajaxWork(url);
+		
 	});
 
 	$('#work-select').on('change',function(){
@@ -88,15 +101,7 @@ function filterWork(cat){
 			var url = templateURL + '/ajax-search.php?cat=' + cat;
 		}
 
-		$.ajax({
-			type: 'GET',
-			url: url,
-			success: function(response){
-				$('#work-container').html('');
-				$('#work-container').append(response);
-				audioVideoModal();
-			}
-		});
+		ajaxWork(url);
 	});
 }
 

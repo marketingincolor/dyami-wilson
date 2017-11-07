@@ -2,7 +2,7 @@
 		<div class="row">
 			<div class="small-12 columns clearfix">
 				<h2>Featured Work</h2>
-				<p><a href="<?php echo site_url().'/work'; ?>"><button class="btn-black hvr-rectangle-out all-projects" style="display:inline-block">View All Projects</button></a></p>
+				<p><a href="<?php echo site_url().'/work'; ?>"><button class="btn-black all-projects" style="display:inline-block">View All Projects</button></a></p>
 			</div>
 			<div class="clearfix"></div>
 		

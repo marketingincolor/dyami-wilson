@@ -48,7 +48,7 @@
 				<p class="description">
 					<?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?>
 				</p>
-				<a href="<?php the_permalink(); ?>"><button class="hvr-rectangle-out btn-black">View Project</button></a>
+				<a href="<?php the_permalink(); ?>"><button class="btn-black">View Project</button></a>
 			</div>
 
 		<?php endwhile;wp_reset_postdata(); ?>

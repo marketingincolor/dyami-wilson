@@ -3,7 +3,7 @@ require('../../../wp-load.php');
 header("HTTP/1.1 200 OK");
 ?>
 
-<div class="row" style="margin-top:0">
+<div class="row" style="margin-top:0" id="ajax-row">
 
 	<!-- query video post format -->
 	<?php

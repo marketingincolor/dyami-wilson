@@ -21,7 +21,7 @@
 				<!-- Form Section -->
 				<section class="footer__pre-form">
 					<div class="row">
-						<div class="medium-10 medium-offset-1 columns text-left">
+						<div class="medium-10 medium-centered large-8 columns text-left">
 							<section class="footer-top-container">
 								<h2><?php echo $options['footer_title']; ?></h2>
 
@@ -93,12 +93,12 @@
 				
 				<!-- Scroll To Top -->
 				<section class="footer__back-to-top">
-					<div class="row expanded footer__back-to-top-layout" data-equalizer>
+					<div class="row expanded footer__back-to-top-layout">
 						<div class="back-top-container">
-							<div class="footer__back-to-top-layout-caret-container" data-equalizer-watch>
-								<i class="fa fa-caret-up" aria-hidden="true"></i>
+							<div class="button-group">
+							  <button class="btn-white left-btn hide-for-small-only">Back To Top</button>
+							  <button class="btn-white"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
 							</div>
-							<button class="footer__back-to-top-layout-btn show-for-medium" data-equalizer-watch>Back To Top</button>
 						</div>
 					</div>
 				</section>

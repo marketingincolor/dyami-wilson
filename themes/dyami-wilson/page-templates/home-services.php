@@ -5,7 +5,7 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<div class="row expanded columns" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/images/home/services-top-bg.jpg);">
+	<div class="row expanded columns" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/images/home/services-top-bg.jpg);margin-bottom:5%">
 		<aside class="clearfix">
 			<div class="medium-8 medium-offset-1 columns service-box">
 				<div class="row">

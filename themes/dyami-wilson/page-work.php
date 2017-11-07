@@ -4,8 +4,8 @@
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
-<section class="work-hero" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/work/work-hero.jpg);background-repeat:no-repeat;background-size:cover;background-position: centter center">
-	<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/work/work-hero.jpg" alt=""> -->
+<section class="work-hero">
+	<img src="<?php bloginfo('template_directory'); ?>/assets/images/work/work-hero.jpg" alt="" class="show-for-medium">
 </section>
 
 <section class="featured-work">
