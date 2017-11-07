@@ -45,7 +45,7 @@ function openCloseMenu(){
 	});
 
 	// Close Left menu if user clicks anywehre outside the menu
-	$('#home,#featured-work,#services,.services2,#meet-dyami,.footer').click(function(){
+	$('#home,#featured-work,#services,.services2,#meet-dyami,.footer,.single-hero,.featured-post,.related-posts,.work-hero,.featured-work').click(function(){
 		if (open == true) {
 			$('#left-menu').removeClass('slide-in');
 		}

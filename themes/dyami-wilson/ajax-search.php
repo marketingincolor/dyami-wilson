@@ -118,11 +118,11 @@ header("HTTP/1.1 200 OK");
 			
           <?php }else if ($count_faqs >= 3) { ?>
 	  		
-	  			  <div class="small-12 medium-6 large-4 columns end" style="margin-bottom:50px">
+	  			  <div class="small-12 medium-6 large-4 columns end" style="margin-bottom:100px">
 
 								<?php if (has_post_format('audio')) { ?>
 
-			  				<div class="feat-img-cont shadow" data-audio="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+			  				<div class="feat-img-cont vertical shadow" data-audio="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
 		  						<div class="play">
 		  							<p><i class="fa fa-volume-up" aria-hidden="true"></i></p>
 		  							<p>Play Audio</p>
@@ -131,7 +131,7 @@ header("HTTP/1.1 200 OK");
 
 		  					<?php }else if (has_post_format('video')) { ?>
 
-			  				<div class="feat-img-cont shadow" data-video="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+			  				<div class="feat-img-cont vertical shadow" data-video="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
 		  						<div class="play">
 		  							<p><i class="fa fa-play-circle" aria-hidden="true"></i></p>
 		  							<p>Play Video</p>

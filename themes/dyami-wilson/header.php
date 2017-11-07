@@ -47,23 +47,26 @@
 
 		<nav class="site-navigation top-bar" role="navigation">
 
-			<div class="row expanded top-bar__wrapper" data-equalizer>
+			<div class="row expanded top-bar__wrapper">
 
 				<!-- Hamburger Menu -->
-				<div class="small-3 columns top-bar__hamburger-menu" data-equalizer-watch>
+				<div class="small-3 columns">
 					<?php get_template_part('page-templates/hamburger-icon'); ?>
 				</div>
 				<!-- /Hamburger Menu -->
 
 				<!-- Equalizer Icon -->
-				<div class="small-6 columns top-bar__equalizer-icon text-center" data-equalizer-watch>
+				<div class="small-6 small-offset-3 columns text-center">
 					<a href="<?php echo site_url(); ?>" title="Home"><img src="<?php echo get_stylesheet_directory_uri() .'/assets/images/icons/white-logo.png'; ?>" alt="Equalizer Icon"></a>
+					<?php if (!is_front_page()) { ?>
+							<p class="tagline"><?php the_field('home_page_tagline',5); ?></p>
+					<?php	} ?>
 				</div>
 				<!-- /Equalizer Icon -->
 				
 				<!-- Social Icons -->
-				<div class="small-3 columns text-center show-for-medium top-bar__social-icons show-for-large" data-equalizer-watch>
-					<ul class="">
+				<div class="small-3 columns text-right show-for-medium">
+					<ul class="social-icons">
 
 						<?php if ($options['facebook_link']) { ?>
 
