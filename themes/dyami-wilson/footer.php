@@ -73,6 +73,10 @@
 
 									<li><a href="<?php echo $options['youtube_link']; ?>" title="SoundCloud"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
 
+								<?php }if ($options['vimeo_link']) { ?>
+
+									<li><a href="<?php echo $options['vimeo_link']; ?>" title="Vimeo"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
+
 								<?php }if ($options['linkedin_link']) { ?>
 
 									<li><a href="<?php echo $options['linkedin_link']; ?>" title="SoundCloud"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
@@ -97,7 +101,7 @@
 						<div class="back-top-container">
 							<div class="button-group">
 							  <button class="btn-white left-btn hide-for-small-only">Back To Top</button>
-							  <button class="btn-white"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
+							  <button class="btn-white" aria-label="Back To Top"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
 							</div>
 						</div>
 					</div>

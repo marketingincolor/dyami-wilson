@@ -11,6 +11,7 @@ register_nav_menus( array(
 	'top-bar-r'  => esc_html__( 'Right Top Bar', 'foundationpress' ),
 	'mobile-nav' => esc_html__( 'Mobile', 'foundationpress' ),
 	'left-menu'  => esc_html__( 'Left Menu', 'foundationpress' ),
+	'left-menu-not-home'  => esc_html__( 'Left Menu Not Home', 'foundationpress' ),
 	'category-menu'  => esc_html__( 'Category Menu', 'foundationpress' ),
 ));
 

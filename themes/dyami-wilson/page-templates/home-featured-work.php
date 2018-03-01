@@ -23,7 +23,7 @@
 
 						<?php if (has_post_format('audio')) { ?>
 								
-	  				<div class="feat-img-cont shadow" data-audio="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+	  				<div class="feat-img-cont shadow" data-audio="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<?php the_post_thumbnail_url(); ?>);">
   						<div class="play">
   							<p><i class="fa fa-volume-up" aria-hidden="true"></i></p>
   							<p>Play Audio</p>
@@ -32,7 +32,7 @@
 
 						<?php }else if (has_post_format('video')) { ?>
 
-	  				<div class="feat-img-cont shadow" data-video="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+	  				<div class="feat-img-cont shadow" data-video="<?php the_field('vimeo_link'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<?php the_post_thumbnail_url(); ?>);">
   						<div class="play">
   							<p><i class="fa fa-play-circle" aria-hidden="true"></i></p>
   							<p>Play Video</p>
@@ -42,7 +42,7 @@
 						<?php } ?>
 					</div>
 					<div class="medium-5 large-4 medium-pull-5 large-pull-8 columns">
-						<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p></div>
+						<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Re-creation of Original)</em>';} ?></p></div>
 						<p><?php echo wp_trim_words(get_the_content(),30,'...') ?></p>
 						<p><a href="<?php the_permalink(); ?>" class="black-link">View Project</a></p>
 					</div>
@@ -75,7 +75,7 @@
 
 						<?php }else if (has_post_format('video')) { ?>
 
-	  				<div class="feat-img-cont shadow" data-video="<?php the_field('file'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+	  				<div class="feat-img-cont shadow" data-video="<?php the_field('vimeo_link'); ?>" data-open="audio-video-modal" data-title="<?php the_title(); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
   						<div class="play">
   							<p><i class="fa fa-play-circle" aria-hidden="true"></i></p>
   							<p>Play Video</p>
@@ -86,7 +86,7 @@
 												
 					</div>
 					<div class="medium-5 large-4 columns">
-						<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Demo)</em>';} ?></p></div>
+						<div class="project-meta"><h3><?php the_title(); ?></h3><p> <?php if(get_field('author')){ echo 'by ';the_field('author');}else{echo '<em>(Re-creation of Original)</em>';} ?></p></div>
 						<p><?php echo wp_trim_words(get_the_content(),30,'...') ?></p>
 						<p><a href="<?php the_permalink(); ?>" class="black-link">View Project</a></p>
 					</div>

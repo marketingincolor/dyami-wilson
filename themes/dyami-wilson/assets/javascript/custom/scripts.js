@@ -3,15 +3,24 @@ $(document).ready(function(){
 	filterWork();
 	audioVideoModal();
 	openCloseMenu();
+	// leftMenuChangeLinks();
 
 	$('#home').find('.home-hero__layout')
 	  // .slideUp('slow')
 	  .animate({
 	  	opacity: 1,
-	  	top: '50%'
+	  	top: '55%'
 	  },1000,function(){
   });
 });
+
+// function leftMenuChangeLinks(){
+// 	$('#left-menu-list').find('li').each(function(){
+// 		var url     = $(this).attr('href');
+// 		var siteURL = location.href;
+// 		$(this).attr('href',siteURL + url);
+// 	});
+// }
 
 function removeMenuScrolling() {
 	
@@ -39,12 +48,25 @@ function openCloseMenu(){
 	});
 
 	// Close left menu
-	$('.menu-close,#menu-item-17').on('click',function(){
+	$('.menu-close').on('click',function(){
 		$('#left-menu').removeClass('slide-in');
 		open = false;
 	});
 
-	// Close Left menu if user clicks anywehre outside the menu
+	// Smooth scroll to section when left menu anchor is clicked
+	// Then close menu after scrolling is complete
+	$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000,function(){
+    	$('#left-menu').removeClass('slide-in');
+    	open = false;
+    });
+	});
+
+	// Close Left menu if user clicks anywhere outside the menu
 	$('#home,#featured-work,#services,.services2,#meet-dyami,.footer,.single-hero,.featured-post,.related-posts,.work-hero,.featured-work').click(function(){
 		if (open == true) {
 			$('#left-menu').removeClass('slide-in');
@@ -111,25 +133,23 @@ function audioVideoModal(){
 
 		// check if audio or video post
 		if ($(this).data('audio')) {
-			console.log('audio');
 			var type    = 'audio/mpeg';
 			var ele     = 'audio';
 			var fileURL = $(this).data('audio');
 			var title   = $(this).data('title');
+		  var html      = '<' + ele + ' controls autoplay><source src="' + fileURL +'" type="' + type +'"></'+ ele +'>';
 		}
 		if ($(this).data('video')) {
-			console.log('video');
 			var type    = 'video/mp4';
 			var ele     = 'video';
 			var fileURL = $(this).data('video');
 			var title   = $(this).data('title');
+			var html    = '<iframe src="'+ fileURL +'" frameborder="0" style="width:100%" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
 		}
 		// set html that will be injected into modal
-		var html      = '<' + ele + ' controls autoplay><source src="' + fileURL +'" type="' + type +'"></'+ ele +'>';
 		
 		// After modal opens inject html into it
 		$(document).on('open.zf.reveal',function(){
-			console.log('revealed');
 			$('#audio-video-modal').find('#modal-title').html(title);
 			$('#audio-video-modal').find('#modal-body').html(html);
 		});
@@ -137,9 +157,9 @@ function audioVideoModal(){
 }
 
 // Stop the file from playing when modal is closed
-console.log('closed');
 $(document).on('closed.zf.reveal',function(){
-	$('#audio-video-modal').find('video,audio').trigger('pause');
+	$('#audio-video-modal').find('audio').trigger('pause');
+	$('#audio-video-modal').find('#modal-body').html('');
 });
 
 // Set Category to All when landing on work page

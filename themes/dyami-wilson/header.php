@@ -78,7 +78,7 @@
 
 						<?php }if ($options['spotify_link']) { ?>
 							
-							<li><a href="<?php echo $options['spotify_link']; ?>" title="Spotify Profile"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
+							<li><a href="<?php echo $options['spotify_link']; ?>" title="Spotify"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
 
 						<?php }if ($options['soundcloud_link']) { ?>
 
@@ -86,11 +86,15 @@
 
 						<?php }if ($options['youtube_link']) { ?>
 
-							<li><a href="<?php echo $options['youtube_link']; ?>" title="SoundCloud"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+							<li><a href="<?php echo $options['youtube_link']; ?>" title="Youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+
+						<?php }if ($options['vimeo_link']) { ?>
+
+							<li><a href="<?php echo $options['vimeo_link']; ?>" title="Vimeo"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
 
 						<?php }if ($options['linkedin_link']) { ?>
 
-							<li><a href="<?php echo $options['linkedin_link']; ?>" title="SoundCloud"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+							<li><a href="<?php echo $options['linkedin_link']; ?>" title="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
 
 						<?php } ?>
 					</ul> 
